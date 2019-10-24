@@ -6,15 +6,12 @@
     <h3>{{ message }}</h3>
 
     <div>
-        <form action="." method="POST" name="list">
-            {% csrf_token %}
-            {% for elem in elements %}
-                 {{ elem }}
-                <input type="hidden" name="selection">
-                <input type="submit" value="Submit">
-                <br>
-            {% endfor %}
-        </form>
+        {% for elem in elements %}
+            <a href="{% url 'list' prev=current selection=elem %}">
+                {{ elem }}
+            </a>
+            <br>
+        {% endfor %}
     </div>
 
 {% endblock %}

@@ -6,9 +6,9 @@
     <h3>{{ message }}</h3>
 
     <div>
-        {% for continent in continents %}
-            <a href="continent.html">
-                {{ continent }}
+        {% for elem in elements %}
+            <a href="{% url 'list' prev=current selection=elem %}">
+                {{ elem }}
             </a>
             <br>
         {% endfor %}

@@ -1,5 +1,6 @@
 import os
 
+import feedparser
 from django.http import HttpRequest
 from django.shortcuts import render
 from datetime import datetime
@@ -32,44 +33,31 @@ def about(request):
     return render(request, 'about.html', tparams)
 
 
-def list(request):
-    assert isinstance(request, HttpRequest)
+def list(request, prev, selection):
+    print(f'/{prev}[@name="{selection}"]/*')
 
-    if 'selection' in request.POST:
-        print("selection")
-        selection = request.POST['selection']
+    elements = tree.xpath(f'/{prev}[@name="{selection}"]/*')
+    print(elements)
 
-        elements = tree.xpath('//[@name="selection"]/@name')
-
-        tparams = {
-            'title': '...',
-            'message': 'List of ...',
+    tparams = {
+            'title': f'{selection}',
+            'message': 'List:',
             'year': datetime.now().year,
+            'current': selection,
             'selection': elements,
-        }
-        return render(request, 'list.html', tparams)
+    }
+    return render(request, 'list.html', tparams)
 
-    else:
-        print("nope")
-        print(request.POST)
-        continent_names = tree.xpath('/mondial/continent/@name')
-
-        tparams = {
-            'title': 'Continents',
-            'message': 'List of continents',
-            'year': datetime.now().year,
-            'elements': continent_names,
-        }
-        return render(request, 'continents.html', tparams)
 
 def continents(request):
-    continent_names = tree.xpath('/mondial/continent/@name')
+    elements = tree.xpath('/mondial/continent/@name')
 
     tparams = {
         'title': 'Continents',
         'message': 'List of continents',
         'year': datetime.now().year,
-        'continents': continent_names,
+        'current': 'continent',
+        'elements': elements,
     }
     return render(request, 'continents.html', tparams)
 
@@ -81,7 +69,8 @@ def countries(request):
         'title': 'Countries',
         'message': 'List of countries',
         'year': datetime.now().year,
-        'countries': country_names,
+        'current': 'country',
+        'elements': country_names,
     }
     return render(request, 'countries.html', tparams)
 
@@ -96,3 +85,15 @@ def organizations(request):
         'organizations': organization_names,
     }
     return render(request, 'organizations.html', tparams)
+
+
+def rss(request):
+    feeds = feedparser.parse('http://feeds.jn.pt/JN-Mundo')
+
+    tparams = {
+        'title': 'RSS',
+        'message': 'Your application description page.',
+        'year': datetime.now().year,
+        'feeds': feeds,
+    }
+    return render(request, 'rss.html', tparams)

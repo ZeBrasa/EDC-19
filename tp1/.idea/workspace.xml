@@ -12,6 +12,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -22,6 +23,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/templates" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/templates" />
       <recent name="$PROJECT_DIR$/app/data" />
@@ -78,6 +82,8 @@
       <updated>1571756252194</updated>
       <workItem from="1571756255000" duration="3233000" />
       <workItem from="1571837916523" duration="14083000" />
+      <workItem from="1571905183223" duration="10405000" />
+      <workItem from="1571923106877" duration="3254000" />
     </task>
     <servers />
   </component>

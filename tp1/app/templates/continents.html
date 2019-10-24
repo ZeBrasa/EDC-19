@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h2>{{ title }}.</h2>
+    <h3>{{ message }}</h3>
+
+    <div>
+        {% for continent in continents %}
+            <a href="continent.html">
+                {{ continent }}
+            </a>
+            <br>
+        {% endfor %}
+    </div>
+
+{% endblock %}

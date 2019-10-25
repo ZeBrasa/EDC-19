@@ -30,13 +30,13 @@
             <a class="nav-link" href="{% url 'home' %}">Home</a>
           </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'continents' %}">Continents</a>
+                <a class="nav-link" href="{% url 'rootList' selection='continent' %}">Continents</a>
           </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'countries' %}">Countries</a>
+                <a class="nav-link" href="{% url 'rootList' selection='country' %}">Countries</a>
           </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'organizations' %}">Organizations</a>
+                <a class="nav-link" href="{% url 'rootList' selection='organization' %}">Organizations</a>
           </li>
             <li class="nav-item">
             <a class="nav-link" href="{% url 'about' %}">About</a>

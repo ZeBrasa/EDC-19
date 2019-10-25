@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+ {% load custom_tags %}
+
 {% block content %}
 
     <h2>{{ title }}.</h2>
@@ -7,8 +9,8 @@
 
     <div>
         {% for elem in elements %}
-            <a href="{% url 'list' prev=current selection=elem %}">
-                {{ elem }}
+            <a href="{% url 'list' selection=elem|get_attr:'id' prev=current %}">
+                {{ elem|get_attr:'name' }}
             </a>
             <br>
         {% endfor %}

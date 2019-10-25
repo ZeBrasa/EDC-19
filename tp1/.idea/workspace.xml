@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f11cbfbe-054c-4ffc-a3e3-3774b05dee40" name="Default Changelist" comment="" />
+    <list default="true" id="f11cbfbe-054c-4ffc-a3e3-3774b05dee40" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templatetags/custom_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/continents.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/countries.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/organizations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp1/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp1/urls.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +29,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1SZ1M1fwxsh6B3OWah8joDdxAnt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -84,10 +102,22 @@
       <workItem from="1571837916523" duration="14083000" />
       <workItem from="1571905183223" duration="10405000" />
       <workItem from="1571923106877" duration="3254000" />
+      <workItem from="1571999388665" duration="9434000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

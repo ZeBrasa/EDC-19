@@ -22,11 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     url(r'^$', views.home, name='home'),
-    path('about/', views.about, name='about'),
-    url(r'^continents/$', views.continents, name='continents'),
-    url(r'^countries/$', views.countries, name='countries'),
-    path('organizations/', views.organizations, name='organizations'),
-    path('list/', views.list, name='list'),
+    url(r'^about/$', views.about, name='about'),
+    url(r'^(?P<selection>[-\w]+)', views.list, name='rootList'),
     url(r'^(?P<prev>[-\w]+)/(?P<selection>[-\w]+)', views.list, name='list'),
-    path('rss/', views.rss, name='rss'),
+    url(r'^rss/$', views.rss, name='rss'),
 ]

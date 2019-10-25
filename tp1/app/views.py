@@ -33,58 +33,27 @@ def about(request):
     return render(request, 'about.html', tparams)
 
 
-def list(request, prev, selection):
-    print(f'/{prev}[@name="{selection}"]/*')
+def list(request, selection, prev=None):
+    print(prev)
+    if not prev:
+        print(f'//{selection}/')
+        elements = tree.xpath(f'//{selection}')
+        print(type(elements))
+        print(elements[0].get("name"))
 
-    elements = tree.xpath(f'/{prev}[@name="{selection}"]/*')
-    print(elements)
+    else:
+        print(f'/{prev}[@id="{selection}"]/*')
+        elements = tree.xpath(f'/{prev}[@id="{selection}"]/*')
+        selection = prev.append("/" + selection)
 
     tparams = {
             'title': f'{selection}',
             'message': 'List:',
             'year': datetime.now().year,
             'current': selection,
-            'selection': elements,
+            'elements': elements,
     }
     return render(request, 'list.html', tparams)
-
-
-def continents(request):
-    elements = tree.xpath('/mondial/continent/@name')
-
-    tparams = {
-        'title': 'Continents',
-        'message': 'List of continents',
-        'year': datetime.now().year,
-        'current': 'continent',
-        'elements': elements,
-    }
-    return render(request, 'continents.html', tparams)
-
-
-def countries(request):
-    country_names = tree.xpath('/mondial/country/@name')
-
-    tparams = {
-        'title': 'Countries',
-        'message': 'List of countries',
-        'year': datetime.now().year,
-        'current': 'country',
-        'elements': country_names,
-    }
-    return render(request, 'countries.html', tparams)
-
-
-def organizations(request):
-    organization_names = tree.xpath('/mondial/organization/@name')
-
-    tparams = {
-        'title': 'Organizations',
-        'message': 'List of organizations',
-        'year': datetime.now().year,
-        'organizations': organization_names,
-    }
-    return render(request, 'organizations.html', tparams)
 
 
 def rss(request):

@@ -34,12 +34,21 @@ def about(request):
 
 
 def list(request, selection, prev=None):
+    xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + 'countries.xsl'))
+    transform = etree.XSLT(xslt_tree)
+
+    tparams = {
+        'year': datetime.now().year,
+        'current': selection,
+        'page': transform(root, selection=f'//{selection}')
+    }
+
+    return render(request, 'xslttest.html', tparams)
+    '''
     print(prev)
     if not prev:
         print(f'//{selection}/')
         elements = tree.xpath(f'//{selection}')
-        print(type(elements))
-        print(elements[0].get("name"))
 
     else:
         print(f'/{prev}[@id="{selection}"]/*')
@@ -53,11 +62,11 @@ def list(request, selection, prev=None):
             'current': selection,
             'elements': elements,
     }
-    return render(request, 'list.html', tparams)
-
+    return render(request, 'listXSLT.xhtml', tparams)
+'''
 
 def rss(request):
-    feeds = feedparser.parse('http://feeds.jn.pt/JN-Mundo')
+    feeds = feedparser.parse('https://news.google.com/rss?hl=en-US&gl=US&ceid=US%3Aen&x=1571747254.2933')
 
     tparams = {
         'title': 'RSS',

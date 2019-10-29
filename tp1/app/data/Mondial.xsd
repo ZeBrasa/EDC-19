@@ -5,33 +5,45 @@
       <xs:documentation>not valid: DOCTYPE mondial SYSTEM "mondial-3.0.dtd"</xs:documentation>
     </xs:annotation>
   </xs:element>
+
   <xs:complexType name="continentType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:string" name="id" use="optional"/>
-        <xs:attribute type="xs:string" name="name" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
+    <xs:sequence>
+      <xs:restriction base="xs:string">
+        <xs:atribute type="xs:string" name="id">
+            <xs:pattern value="f0_[0-9}[0-9]{0-9]"/>
+        </xs:atribute>
+        <xs:atribute type="xs:string" name="name"/>
+      </xs:restriction>
+    </xs:sequence>
   </xs:complexType>
+
   <xs:complexType name="populationType">
     <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:string" name="year" use="optional"/>
-      </xs:extension>
+      <xs:restriction base="xs:integer">
+        <xs:atribute type="xs:integer" name="year"/>
+      </xs:restriction>
     </xs:simpleContent>
   </xs:complexType>
+
   <xs:complexType name="cityType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="name" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="populationType" name="population" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="located_atType" name="located_at" maxOccurs="unbounded" minOccurs="0"/>
-    </xs:sequence>
-    <xs:attribute type="xs:string" name="id" use="optional"/>
-    <xs:attribute type="xs:string" name="country" use="optional"/>
-    <xs:attribute type="xs:string" name="longitude" use="optional"/>
-    <xs:attribute type="xs:string" name="latitude" use="optional"/>
-    <xs:attribute type="xs:string" name="province" use="optional"/>
+       <xs:sequence>
+          <xs:atribute type="xs:string" name="name"/>                                // o default corre sempre uma vez
+          <xs:atribute type="populationType" name="population"  minOccurs="0"/>      // pode ou nao occorrer
+          <xs:atribute type="located_atType" name="located_at"  minOccurs="0"/>
+        </xs:sequence>
+       <xs:choise>
+          <xs:restriction base="xs:string">
+             <xs:atribute type="xs:string" name="id" />
+                 <xs:pattern value="f0_[0-9]+"/>
+            <xs:attribute type="xs:string" name="country" />
+                 <xs:pattern value="f0_[0-9]+"/>
+          </xs:restriction>
+            <xs:attribute type="xs:double" name="longitude" />
+            <xs:attribute type="xs:double" name="latitude" />
+            <xs:attribute type="xs:string" name="province" />
+       </xs:choise>
   </xs:complexType>
+
   <xs:complexType name="located_atType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -40,6 +52,7 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+
   <xs:complexType name="ethnicgroupsType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -47,6 +60,7 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+
   <xs:complexType name="religionsType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -54,6 +68,7 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+
   <xs:complexType name="encompassedType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -62,6 +77,7 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+
   <xs:complexType name="borderType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -70,6 +86,7 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+
   <xs:complexType name="countryType">
     <xs:sequence>
       <xs:element type="xs:string" name="name" maxOccurs="unbounded" minOccurs="0"/>
@@ -98,6 +115,7 @@
     <xs:attribute type="xs:string" name="gdp_ind" use="optional"/>
     <xs:attribute type="xs:string" name="gdp_serv" use="optional"/>
   </xs:complexType>
+
   <xs:complexType name="provinceType" mixed="true">
     <xs:sequence>
       <xs:element type="cityType" name="city" maxOccurs="unbounded" minOccurs="0"/>
@@ -109,6 +127,7 @@
     <xs:attribute type="xs:string" name="population" use="optional"/>
     <xs:attribute type="xs:string" name="area" use="optional"/>
   </xs:complexType>
+
   <xs:complexType name="languagesType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -116,6 +135,7 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+
   <xs:complexType name="membersType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -124,6 +144,7 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+
   <xs:complexType name="organizationType" mixed="true">
     <xs:sequence>
       <xs:element type="membersType" name="members" maxOccurs="unbounded" minOccurs="0"/>
@@ -134,6 +155,7 @@
     <xs:attribute type="xs:string" name="established" use="optional"/>
     <xs:attribute type="xs:string" name="headq" use="optional"/>
   </xs:complexType>
+
   <xs:complexType name="locatedType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -142,6 +164,7 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+
   <xs:complexType name="mountainType" mixed="true">
     <xs:sequence>
       <xs:element type="locatedType" name="located" maxOccurs="unbounded" minOccurs="0"/>
@@ -152,6 +175,7 @@
     <xs:attribute type="xs:string" name="latitude" use="optional"/>
     <xs:attribute type="xs:string" name="height" use="optional"/>
   </xs:complexType>
+
   <xs:complexType name="desertType" mixed="true">
     <xs:sequence>
       <xs:element type="locatedType" name="located" maxOccurs="unbounded" minOccurs="0"/>
@@ -160,6 +184,7 @@
     <xs:attribute type="xs:string" name="name" use="optional"/>
     <xs:attribute type="xs:string" name="area" use="optional"/>
   </xs:complexType>
+
   <xs:complexType name="islandType" mixed="true">
     <xs:sequence>
       <xs:element type="locatedType" name="located" maxOccurs="unbounded" minOccurs="0"/>
@@ -168,6 +193,7 @@
     <xs:attribute type="xs:string" name="name" use="optional"/>
     <xs:attribute type="xs:string" name="area" use="optional"/>
   </xs:complexType>
+
   <xs:complexType name="toType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -176,6 +202,7 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+
   <xs:complexType name="riverType">
     <xs:sequence>
       <xs:element type="locatedType" name="located" maxOccurs="unbounded" minOccurs="0"/>
@@ -185,6 +212,7 @@
     <xs:attribute type="xs:string" name="length" use="optional"/>
     <xs:attribute type="xs:string" name="name" use="optional"/>
   </xs:complexType>
+
   <xs:complexType name="seaType" mixed="true">
     <xs:sequence>
       <xs:element type="locatedType" name="located" maxOccurs="unbounded" minOccurs="0"/>
@@ -193,6 +221,7 @@
     <xs:attribute type="xs:string" name="name" use="optional"/>
     <xs:attribute type="xs:string" name="depth" use="optional"/>
   </xs:complexType>
+
   <xs:complexType name="lakeType" mixed="true">
     <xs:sequence>
       <xs:element type="locatedType" name="located" maxOccurs="unbounded" minOccurs="0"/>
@@ -201,6 +230,7 @@
     <xs:attribute type="xs:string" name="name" use="optional"/>
     <xs:attribute type="xs:string" name="area" use="optional"/>
   </xs:complexType>
+
   <xs:complexType name="mondialType">
     <xs:choice maxOccurs="unbounded" minOccurs="0">
       <xs:element type="continentType" name="continent" maxOccurs="unbounded" minOccurs="0"/>
@@ -214,4 +244,5 @@
       <xs:element type="lakeType" name="lake" maxOccurs="unbounded" minOccurs="0"/>
     </xs:choice>
   </xs:complexType>
+
 </xs:schema>

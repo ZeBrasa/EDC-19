@@ -11,7 +11,7 @@ from datetime import datetime
 from lxml import etree
 from tp1.settings import BASE_DIR
 
-fname = 'mondial.xml'
+fname = 'Mondial.xml'
 pname = os.path.join(BASE_DIR, 'app/data/' + fname)
 tree = etree.parse(pname)
 root = tree.getroot()
@@ -34,25 +34,36 @@ def about(request):
 
 
 def list(request, selection, prev=None):
-    print(selection)
-    xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + 'list.xsl'))
+    xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + 'countries.xsl'))
     transform = etree.XSLT(xslt_tree)
-    #print(transform(root, selection=f'//{selection}'))
-
-    if prev:
-        print(prev)
-        xpath = f'//*[@{prev}="{selection}"]/parent::*'
-    else:
-        xpath = f'//{selection}'
 
     tparams = {
         'year': datetime.now().year,
         'current': selection,
-        'page': transform(root, selection=xpath),
+        'page': transform(root, selection=f'//{selection}')
     }
 
-    return render(request, 'listDisplay.html', tparams)
+    return render(request, 'xslttest.html', tparams)
+    '''
+    print(prev)
+    if not prev:
+        print(f'//{selection}/')
+        elements = tree.xpath(f'//{selection}')
 
+    else:
+        print(f'/{prev}[@id="{selection}"]/*')
+        elements = tree.xpath(f'/{prev}[@id="{selection}"]/*')
+        selection = prev.append("/" + selection)
+
+    tparams = {
+            'title': f'{selection}',
+            'message': 'List:',
+            'year': datetime.now().year,
+            'current': selection,
+            'elements': elements,
+    }
+    return render(request, 'listXSLT.xhtml', tparams)
+'''
 
 def rss(request):
     feeds = feedparser.parse('https://news.google.com/rss?hl=en-US&gl=US&ceid=US%3Aen&x=1571747254.2933')

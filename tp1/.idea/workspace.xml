@@ -1,40 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f11cbfbe-054c-4ffc-a3e3-3774b05dee40" name="Default Changelist" comment="" />
+    <list default="true" id="f11cbfbe-054c-4ffc-a3e3-3774b05dee40" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templatetags/custom_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/continents.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/countries.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/organizations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp1/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp1/urls.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/data/Mondial.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="31" selection-start-line="31" selection-end-line="41" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/data/Mondial.xsd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="42" column="39" lean-forward="true" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+              <folding>
+                <element signature="n#xs:complexType#1;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#3;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#4;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#5;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#6;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#7;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#8;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#9;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#10;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#11;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#12;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#13;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#14;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#15;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#16;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#17;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#18;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#19;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#20;n#xs:schema#0;n#!!top" />
+                <element signature="n#xs:complexType#21;n#xs:schema#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
         <option value="Python Script" />
-        <option value="XHTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/data/Mondial.xml" />
+        <option value="$PROJECT_DIR$/app/data/Mondial.xsd" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="698" />
+  </component>
   <component name="ProjectId" id="1SZ1M1fwxsh6B3OWah8joDdxAnt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="tp1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tp1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tp1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tp1" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tp1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tp1" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="XHTML File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/data" />
       <recent name="$PROJECT_DIR$/app/templates" />
+      <recent name="$PROJECT_DIR$/app/data" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
@@ -59,7 +159,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="tp1.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\R0ninDaimyo\Desktop\1º Semestre 1920\EDC\Projecto\EDC-19\tp1\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -91,10 +191,62 @@
       <workItem from="1571905183223" duration="10405000" />
       <workItem from="1571923106877" duration="3254000" />
       <workItem from="1571999388665" duration="9434000" />
-      <workItem from="1572365203834" duration="10298000" />
-      <workItem from="1572442312587" duration="15318000" />
+      <workItem from="1572383893708" duration="4544000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4544000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="bottom" id="Python Console" order="5" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Run" order="8" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="SciView" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -105,11 +257,68 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="COLUMN_ORDER" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
             </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/data/Mondial.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="31" selection-start-line="31" selection-end-line="41" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/data/Mondial.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="42" column="39" lean-forward="true" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+          <folding>
+            <element signature="n#xs:complexType#1;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#3;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#4;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#5;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#6;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#7;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#8;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#9;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#10;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#11;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#12;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#13;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#14;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#15;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#16;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#17;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#18;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#19;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#20;n#xs:schema#0;n#!!top" />
+            <element signature="n#xs:complexType#21;n#xs:schema#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

@@ -26,5 +26,6 @@ urlpatterns = [
     url(r'^rss/$', views.rss, name='rss'),
     url(r'^(?P<selection>[-\w]+)/$', views.list, name='rootList'),
     url(r'^(?P<prev>[-\w]+)\/(?P<selection>[-\w]+)/$', views.list, name='list'),
-    url(r'^(?P<uroot>[-\w]+)\/(?P<prev>[-\w]+)\/(?P<selection>[-\w]+)/$', views.list, name='list'),
+    url(r'^[^/]+\/(?P<prev>[-\w]+)\/(?P<selection>[-\w]+)/$', views.list, name='list'),
+    url(r'^[^/]+\/[^/]+\/(?P<prev>[-\w]+)\/(?P<selection>[-\w]+)/$', views.list, name='list'),
 ]

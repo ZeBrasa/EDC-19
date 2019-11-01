@@ -33,22 +33,31 @@ def about(request):
     return render(request, 'about.html', tparams)
 
 
-def list(request, selection, prev=None, uroot=None):
+def list(request, selection, prev=None):
     print(selection)
-    xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + 'list.xsl'))
-    transform = etree.XSLT(xslt_tree)
-    #print(transform(root, selection=f'//{selection}'))
+    xsl = "list.xsl"
 
     if prev:
         print(prev)
         if prev == "continent":
             xpath = f'//*[@{prev}="{selection}"]/parent::*'
+
+        elif ("cty" in selection) or ("city" in selection) or ("stadt" in selection):
+            xpath = f'//*[@*="{selection}"]'
+
+        elif "org" in selection:
+            xpath = f'//*[@*="{selection}"]'
+
         else:
             xpath = f'//*[@id="{selection}"]/city'
+
     else:
         xpath = f'//{selection}'
 
     print(xpath)
+
+    xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + xsl))
+    transform = etree.XSLT(xslt_tree)
     tparams = {
         'year': datetime.now().year,
         'current': selection,

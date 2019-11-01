@@ -1,395 +1,492 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="mondial" type="mondialType"/>
-  <xs:complexType name="populationType">
-    <xs:simpleContent>
-      <xs:extension base="xs:int">
-        <xs:attribute type="xs:string" name="measured" use="optional"/>
-        <xs:attribute type="xs:short" name="year" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="indep_dateType">
-    <xs:simpleContent>
-      <xs:extension base="xs:date">
-        <xs:attribute type="xs:string" name="from" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="encompassedType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:string" name="continent" use="optional"/>
-        <xs:attribute type="xs:float" name="percentage" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="ethnicgroupType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:float" name="percentage" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="religionType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:float" name="percentage" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="languageType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:float" name="percentage" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="borderType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:string" name="country" use="optional"/>
-        <xs:attribute type="xs:float" name="length" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="cityType" mixed="true">
-    <xs:sequence>
-      <xs:element type="xs:string" name="name" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="xs:string" name="localname" minOccurs="0"/>
-      <xs:element type="xs:float" name="latitude"/>
-      <xs:element type="xs:float" name="longitude"/>
-      <xs:element type="xs:float" name="elevation" minOccurs="0"/>
-      <xs:element type="populationType" name="population" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="located_atType" name="located_at" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="located_onType" name="located_on" maxOccurs="unbounded" minOccurs="0"/>
-    </xs:sequence>
-    <xs:attribute type="xs:string" name="id" use="optional"/>
-    <xs:attribute type="xs:string" name="country" use="optional"/>
-    <xs:attribute type="xs:string" name="province" use="optional"/>
-    <xs:attribute type="xs:string" name="is_country_cap" use="optional"/>
-  </xs:complexType>
-  <xs:complexType name="located_atType">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="mondial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="country"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="continent"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="organization"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="sea"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="river"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="lake"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="island"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mountain"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="desert"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="airport"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="positiveDecimal">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="percentage">
+    <xs:restriction base="positiveDecimal">
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="year">
+    <xs:restriction base="xs:nonNegativeInteger">
+      <xs:maxInclusive value="2050"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:attribute name="id" type="xs:ID"/>
+  <xs:attribute name="country" type="xs:IDREF"/>
+  <xs:attribute name="province" type="xs:IDREF"/>
+  <xs:attribute name="capital" type="xs:IDREF"/>
+  <xs:attribute name="percentage" type="percentage"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="localname" type="xs:string"/>
+  <xs:element name="area" type="positiveDecimal"/>
+
+  <xs:attribute name="watertype">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="river"/>
+        <xs:enumeration value="sea"/>
+        <xs:enumeration value="lake"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+
+  <xs:complexType name="percentage-property">
     <xs:simpleContent>
       <xs:extension base="xs:string">
-        <xs:attribute type="xs:string" name="watertype" use="optional"/>
-        <xs:attribute type="xs:string" name="lake" use="optional"/>
-        <xs:attribute type="xs:string" name="sea" use="optional"/>
-        <xs:attribute type="xs:string" name="river" use="optional"/>
+        <xs:attribute ref="percentage" use="required"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  <xs:complexType name="countryType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="name"/>
-      <xs:element type="xs:string" name="localname" minOccurs="0"/>
-      <xs:element type="populationType" name="population" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="xs:float" name="population_growth" minOccurs="0"/>
-      <xs:element type="xs:float" name="infant_mortality" minOccurs="0"/>
-      <xs:element type="xs:float" name="gdp_total" minOccurs="0"/>
-      <xs:element type="xs:float" name="gdp_agri" minOccurs="0"/>
-      <xs:element type="xs:float" name="gdp_ind" minOccurs="0"/>
-      <xs:element type="xs:float" name="gdp_serv" minOccurs="0"/>
-      <xs:element type="xs:float" name="inflation" minOccurs="0"/>
-      <xs:element type="xs:float" name="unemployment" minOccurs="0"/>
-      <xs:element type="indep_dateType" name="indep_date" minOccurs="0"/>
-      <xs:element type="dependentType" name="dependent" minOccurs="0"/>
-      <xs:element type="xs:string" name="government" minOccurs="0"/>
-      <xs:element type="encompassedType" name="encompassed" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="ethnicgroupType" name="ethnicgroup" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="religionType" name="religion" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="languageType" name="language" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="borderType" name="border" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="cityType" name="city" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="provinceType" name="province" maxOccurs="unbounded" minOccurs="0"/>
-    </xs:sequence>
-    <xs:attribute type="xs:string" name="id" use="optional"/>
-    <xs:attribute type="xs:string" name="car_code" use="optional"/>
-    <xs:attribute type="xs:float" name="area" use="optional"/>
-    <xs:attribute type="xs:string" name="capital" use="optional"/>
-    <xs:attribute type="xs:string" name="memberships" use="optional"/>
-  </xs:complexType>
-  <xs:complexType name="provinceType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="name" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="xs:string" name="localname" minOccurs="0"/>
-      <xs:element type="xs:float" name="area"/>
-      <xs:element type="populationType" name="population" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="cityType" name="city" maxOccurs="unbounded" minOccurs="0"/>
-    </xs:sequence>
-    <xs:attribute type="xs:string" name="id" use="optional"/>
-    <xs:attribute type="xs:string" name="country" use="optional"/>
-    <xs:attribute type="xs:string" name="capital" use="optional"/>
-  </xs:complexType>
-  <xs:complexType name="located_onType">
+
+  <xs:element name="elevation" type="xs:decimal"/>
+  <xs:simpleType name="latitude">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="-90"/>
+      <xs:maxInclusive value="90"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="longitude">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="-180"/>
+      <xs:maxInclusive value="180"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="latitude" type="latitude"/>
+  <xs:element name="longitude" type="longitude"/>
+  
+  <xs:group name="coordinates">
+   <xs:sequence>
+    <xs:element ref="latitude" minOccurs="0" maxOccurs="1"/>
+    <xs:element ref="longitude" minOccurs="0" maxOccurs="1"/>
+   </xs:sequence>
+  </xs:group>
+
+  <xs:attributeGroup name="id-and-countries">
+    <xs:attribute ref="id" use="required"/>
+    <xs:attribute name="country" type="xs:IDREFS" use="required"/>
+  </xs:attributeGroup>
+  
+  <xs:element name="country">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="name"/>
+        <xs:element minOccurs="0" maxOccurs="1" ref="localname"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="population"/>
+        <xs:element minOccurs="0" maxOccurs="1" ref="population_growth"/>
+        <xs:element minOccurs="0" maxOccurs="1" ref="infant_mortality"/>
+        <xs:element minOccurs="0" maxOccurs="1" ref="gdp_total"/>
+        <xs:element minOccurs="0" maxOccurs="1" ref="gdp_agri"/>
+        <xs:element minOccurs="0" maxOccurs="1" ref="gdp_ind"/>
+        <xs:element minOccurs="0" maxOccurs="1" ref="gdp_serv"/>
+        <xs:element minOccurs="0" maxOccurs="1" ref="inflation"/>
+        <xs:element minOccurs="0" maxOccurs="1" ref="unemployment"/>
+        <xs:choice minOccurs="0" maxOccurs="1">
+          <xs:element minOccurs="0" maxOccurs="1" ref="indep_date"/>
+          <xs:element minOccurs="0" maxOccurs="1" ref="dependent"/>
+        </xs:choice>
+        <xs:element minOccurs="0" maxOccurs="1" ref="government"/>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="encompassed"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ethnicgroup"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="religion"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="language"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="border"/>
+        <xs:choice>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="province"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="city"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="car_code" type="xs:string"/>
+      <xs:attribute name="area" type="positiveDecimal"/>
+      <xs:attribute ref="capital"/>
+      <xs:attribute name="memberships" type="xs:IDREFS"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="population">
+   <xs:complexType>
     <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:string" name="island" use="optional"/>
-      </xs:extension>
+     <xs:extension base="xs:nonNegativeInteger">
+      <xs:attribute name="year" type="year" use="required"/>
+      <xs:attribute name="measured" type="xs:string"/>
+     </xs:extension>
     </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="dependentType">
+   </xs:complexType>
+  </xs:element>
+
+  <xs:element name="population_growth" type="xs:decimal"/>
+  <xs:element name="infant_mortality" type="positiveDecimal"/>
+  <xs:element name="gdp_total" type="positiveDecimal"/>
+  <xs:element name="gdp_ind" type="percentage"/>
+  <xs:element name="gdp_agri" type="percentage"/>
+  <xs:element name="gdp_serv" type="percentage"/>
+  <xs:element name="inflation" type="xs:decimal"/>
+  <xs:element name="unemployment" type="positiveDecimal"/>
+
+  <xs:element name="indep_date">
+   <xs:complexType>
     <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:string" name="country" use="optional"/>
-      </xs:extension>
+     <xs:extension base="xs:date">
+      <xs:attribute name="from" type="xs:string"/>
+      <!-- usually idref to a country, but not always (e.g. "Ottoman Empire") -->
+     </xs:extension>
     </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="continentType">
-    <xs:sequence>
-      <xs:element name="name">
+   </xs:complexType>
+  </xs:element>
+
+  <xs:element name="dependent">
+    <xs:complexType>
+      <xs:attribute ref="country" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="government" type="xs:string"/>
+  
+  <xs:element name="encompassed">
+    <xs:complexType>
+      <xs:attribute name="continent" type="xs:IDREF" use="required"/>
+      <xs:attribute ref="percentage" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ethnicgroup" type="percentage-property"/>
+  <xs:element name="religion" type="percentage-property"/>
+  <xs:element name="language" type="percentage-property"/>
+
+  <xs:element name="border">
+    <xs:complexType>
+      <xs:attribute ref="country" use="required"/>
+      <xs:attribute name="length" type="positiveDecimal" use="required"/>
+      <xs:attribute name="justice" type="xs:IDREF" default="org-UN"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="province">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element ref="localname" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="area" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="population" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="city" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute ref="id" use="required"/>
+      <xs:attribute ref="country" use="required"/>
+      <xs:attribute ref="capital"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="city">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element ref="localname" minOccurs="0" maxOccurs="1"/>
+        <xs:group ref="coordinates"/>
+        <xs:element ref="elevation" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="population" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="located_at" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="located_on" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute ref="id" use="required"/>
+      <xs:attribute name="is_country_cap" type="xs:string"/>
+      <xs:attribute name="is_state_cap" type="xs:string"/>
+      <xs:attribute ref="country" use="required"/>
+      <xs:attribute ref="province"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="located_at">
+    <xs:complexType>
+      <xs:attribute ref="watertype" use="required"/>
+      <xs:attribute name="river" type="xs:IDREFS"/>
+      <xs:attribute name="sea" type="xs:IDREFS"/>
+      <xs:attribute name="lake" type="xs:IDREFS"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="located_on">
+    <xs:complexType>
+      <xs:attribute name="island" type="xs:IDREF" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="organization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="abbrev"/>
+        <xs:element ref="established" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="members" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute ref="id" use="required"/>
+      <xs:attribute name="headq" type="xs:IDREF"/>
+     </xs:complexType>
+  </xs:element>
+
+  <xs:element name="abbrev" type="xs:string"/>
+  <xs:element name="established" type="xs:date"/>
+
+  <xs:element name="members">
+    <xs:complexType>
+      <xs:attribute name="type" type="xs:string" use="required"/>
+      <xs:attribute name="country" type="xs:IDREFS" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="continent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="area" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute ref="id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="depth" type="positiveDecimal"/>
+  <xs:element name="height" type="positiveDecimal"/> <!-- dams of lakes -->
+  <xs:element name="length" type="positiveDecimal"/>
+  <xs:element name="mountains" type="xs:string"/>
+  
+  <xs:element name="source">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mountains" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="located" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="from" minOccurs="0" maxOccurs="1"/>
+        <xs:group ref="coordinates"/>
+        <xs:element ref="elevation" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="country" type="xs:IDREFS"/>
+    </xs:complexType>
+  </xs:element>    
+
+  <xs:element name="estuary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="located" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:group ref="coordinates"/>
+        <xs:element ref="elevation" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="country" type="xs:IDREFS"/>
+    </xs:complexType>
+  </xs:element>    
+
+  <xs:element name="from">
+    <xs:complexType>
+      <xs:attribute ref="watertype" use="required"/>
+      <xs:attribute name="water" type="xs:IDREFS" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="river">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element ref="located" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="through" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="to" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="area" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="length" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="source" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="estuary" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="id-and-countries"/>
+      <xs:attribute name="island" type="xs:IDREF"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="to">
+    <xs:complexType>
+      <xs:attribute ref="watertype" use="required"/>
+      <xs:attribute name="water" type="xs:IDREF" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="through">
+    <xs:complexType>
+      <xs:attribute name="lake" type="xs:IDREF" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="located">
+    <xs:complexType>
+      <xs:attribute ref="country" use="required"/>
+      <xs:attribute name="province" type="xs:IDREFS"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="lake">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element ref="located" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="to" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="area" minOccurs="0" maxOccurs="1"/>
+        <xs:group ref="coordinates"/>
+        <xs:element ref="elevation" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="depth" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="height" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="id-and-countries"/>
+      <xs:attribute name="island" type="xs:IDREF"/>
+      <xs:attribute name="salinity" type="xs:decimal"/>
+      <xs:attribute name="type">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:enumeration value="Europe"/>
-            <xs:enumeration value="Asia"/>
-            <xs:enumeration value="Australia/Oceania"/>
-            <xs:enumeration value="Africa"/>
-            <xs:enumeration value="America"/>
+            <xs:enumeration value="impact"/>
+            <xs:enumeration value="crater"/>
+            <xs:enumeration value="saline"/>
+            <xs:enumeration value="artificial"/>
+            <xs:enumeration value="caldera"/>
+            <xs:enumeration value="acid"/>
+            <xs:enumeration value="naturaldam"/>
+            <xs:enumeration value="dam"/>
+            <xs:enumeration value="asphalt"/>
           </xs:restriction>
         </xs:simpleType>
-      </xs:element>
-      <xs:element name="area">
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" maxOccurs="unbounded"/>
+        <xs:element ref="located" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="area" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="depth" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="id-and-countries"/>
+      <xs:attribute name="bordering" type="xs:IDREFS"/>
+     </xs:complexType>
+  </xs:element>
+
+  <xs:element name="desert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" maxOccurs="unbounded"/>
+        <xs:element ref="located" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="area" minOccurs="0" maxOccurs="1"/>
+        <xs:group ref="coordinates"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="id-and-countries"/>
+      <xs:attribute name="climate" type="xs:string" fixed="dry aride"/>
+      <xs:attribute name="temperature" type="xs:string" default="hot"/>
+      <xs:attribute name="type" default="sand">
         <xs:simpleType>
-          <xs:restriction base="xs:int">
-            <xs:enumeration value="9938000"/>
-            <xs:enumeration value="44579000"/>
-            <xs:enumeration value="8600000"/>
-            <xs:enumeration value="30221000"/>
-            <xs:enumeration value="42075000"/>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="sand"/>
+            <xs:enumeration value="salt"/>
+            <xs:enumeration value="rocks"/>
+            <xs:enumeration value="lime"/>
           </xs:restriction>
         </xs:simpleType>
-      </xs:element>
-    </xs:sequence>
-    <xs:attribute type="xs:string" name="id" use="optional"/>
-  </xs:complexType>
-  <xs:complexType name="membersType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:string" name="type" use="optional"/>
-        <xs:attribute type="xs:string" name="country" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="organizationType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="name"/>
-      <xs:element type="xs:string" name="abbrev"/>
-      <xs:element type="xs:date" name="established" minOccurs="0"/>
-      <xs:element type="membersType" name="members" maxOccurs="unbounded" minOccurs="0"/>
-    </xs:sequence>
-    <xs:attribute type="xs:string" name="id" use="optional"/>
-    <xs:attribute type="xs:string" name="headq" use="optional"/>
-  </xs:complexType>
-  <xs:complexType name="locatedType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:string" name="country" use="optional"/>
-        <xs:attribute type="xs:string" name="province" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="seaType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="name">
-        <xs:annotation>
-          <xs:documentation>includes Laptev and Chukchen Sea</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element type="locatedType" name="located" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="xs:int" name="area" minOccurs="0"/>
-      <xs:element type="xs:short" name="depth" minOccurs="0"/>
-    </xs:sequence>
-    <xs:attribute type="xs:string" name="id" use="optional"/>
-    <xs:attribute type="xs:string" name="country" use="optional"/>
-    <xs:attribute type="xs:string" name="bordering" use="optional"/>
-  </xs:complexType>
-  <xs:complexType name="toType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:string" name="watertype" use="optional"/>
-        <xs:attribute type="xs:string" name="water" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="sourceType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="mountains" minOccurs="0"/>
-      <xs:element type="locatedType" name="located" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="fromType" name="from" minOccurs="0"/>
-      <xs:element type="xs:float" name="latitude"/>
-      <xs:element type="xs:float" name="longitude"/>
-      <xs:element type="xs:float" name="elevation" minOccurs="0"/>
-    </xs:sequence>
-    <xs:attribute type="xs:string" name="country" use="optional"/>
-  </xs:complexType>
-  <xs:complexType name="estuaryType">
-    <xs:sequence>
-      <xs:element type="locatedType" name="located" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="xs:float" name="latitude"/>
-      <xs:element type="xs:float" name="longitude"/>
-      <xs:element type="xs:float" name="elevation" minOccurs="0"/>
-    </xs:sequence>
-    <xs:attribute type="xs:string" name="country" use="optional"/>
-  </xs:complexType>
-  <xs:complexType name="riverType">
-    <xs:choice maxOccurs="unbounded" minOccurs="0">
-      <xs:element type="xs:string" name="name"/>
-      <xs:element type="locatedType" name="located">
-        <xs:annotation>
-          <xs:documentation>anderer Name auch Dnjestr  Rio Pasaje/Rio Juramento- Rio Guachipas/Rio Las Conchas south of Salta 
-           Rio Calchaqui west of Salta  vom Viktoriasee durch Lake Kyoga bis Albertsee</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element type="throughType" name="through">
-        <xs:annotation>
-          <xs:documentation>two arms towards the north sea</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element type="toType" name="to"/>
-      <xs:element type="xs:float" name="area">
-        <xs:annotation>
-          <xs:documentation>into the southern arm of the Rhein</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element type="xs:float" name="length"/>
-      <xs:element type="sourceType" name="source">
-        <xs:annotation>
-          <xs:documentation>incl Rio Guainia/CO  von Khartum bis zum Mittelmeer  Encycl.Britannica: ab Zusammenfluss von Ruvuvu und Nyabarongo  Encycl.Britannica: ab Zusammenfluss mit Ruvuvu weiter als Kagera  Encycl.Britannica: ab Muendung in den Nyabarongo weiter als Kagera</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element type="estuaryType" name="estuary"/>
-    </xs:choice>
-    <xs:attribute type="xs:string" name="id" use="optional"/>
-    <xs:attribute type="xs:string" name="country" use="optional"/>
-    <xs:attribute type="xs:string" name="island" use="optional"/>
-  </xs:complexType>
-  <xs:complexType name="fromType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:string" name="watertype" use="optional"/>
-        <xs:attribute type="xs:string" name="water" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="throughType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:string" name="lake" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="lakeType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="name" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="locatedType" name="located" maxOccurs="unbounded" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation>crater lake of Gunung Masurai</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element type="toType" name="to" minOccurs="0"/>
-      <xs:element type="xs:float" name="area"/>
-      <xs:element type="xs:float" name="latitude"/>
-      <xs:element type="xs:float" name="longitude"/>
-      <xs:element type="xs:float" name="elevation" minOccurs="0"/>
-      <xs:element type="xs:float" name="depth" minOccurs="0"/>
-      <xs:element name="height" minOccurs="0">
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="islands" type="xs:string"/>
+
+  <xs:element name="island">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" maxOccurs="unbounded"/>
+        <xs:element ref="islands" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="located" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="area" minOccurs="0" maxOccurs="1"/>
+        <xs:group ref="coordinates"/>
+        <xs:element ref="elevation" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="id-and-countries"/>
+      <xs:attribute name="sea" type="xs:IDREFS"/>
+      <xs:attribute name="lake" type="xs:IDREF"/>
+      <xs:attribute name="river" type="xs:IDREFS"/>
+      <xs:attribute name="type">
         <xs:simpleType>
-          <xs:restriction base="xs:short">
-            <xs:enumeration value="124"/>
-            <xs:enumeration value="154"/>
-            <xs:enumeration value="113"/>
-            <xs:enumeration value="58"/>
-            <xs:enumeration value="235"/>
-            <xs:enumeration value="216"/>
-            <xs:enumeration value="221"/>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="volcanic"/>
+            <xs:enumeration value="coral"/>
+            <xs:enumeration value="atoll"/>
+            <xs:enumeration value="lime"/>
           </xs:restriction>
         </xs:simpleType>
-      </xs:element>
-    </xs:sequence>
-    <xs:attribute type="xs:string" name="id" use="optional"/>
-    <xs:attribute type="xs:string" name="country" use="optional"/>
-    <xs:attribute type="xs:string" name="type" use="optional"/>
-    <xs:attribute type="xs:string" name="island" use="optional"/>
-    <xs:attribute type="xs:float" name="salinity" use="optional"/>
-  </xs:complexType>
-  <xs:complexType name="islandType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="name" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="xs:string" name="islands" minOccurs="0"/>
-      <xs:element type="locatedType" name="located" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="xs:float" name="area" minOccurs="0"/>
-      <xs:element type="xs:float" name="latitude"/>
-      <xs:element type="xs:float" name="longitude"/>
-      <xs:element type="xs:float" name="elevation" minOccurs="0"/>
-    </xs:sequence>
-    <xs:attribute type="xs:string" name="id" use="optional"/>
-    <xs:attribute type="xs:string" name="country" use="optional"/>
-    <xs:attribute type="xs:string" name="sea" use="optional"/>
-    <xs:attribute type="xs:string" name="type" use="optional"/>
-    <xs:attribute type="xs:string" name="river" use="optional"/>
-    <xs:attribute type="xs:string" name="lake" use="optional"/>
-  </xs:complexType>
-  <xs:complexType name="mountainType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="name" maxOccurs="unbounded" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation>no higher peak west+north, prominence 3100m non-volcanic! tripoint BOL-RCH-RA  southernmost 6000m</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element type="xs:string" name="mountains" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation>in Kayan Mentarang Reserve</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element type="locatedType" name="located" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="xs:float" name="latitude"/>
-      <xs:element type="xs:float" name="longitude"/>
-      <xs:element type="xs:short" name="elevation"/>
-    </xs:sequence>
-    <xs:attribute type="xs:string" name="id" use="optional"/>
-    <xs:attribute type="xs:string" name="country" use="optional"/>
-    <xs:attribute type="xs:string" name="island" use="optional"/>
-    <xs:attribute type="xs:string" name="type" use="optional"/>
-    <xs:attribute type="xs:date" name="last_eruption" use="optional"/>
-  </xs:complexType>
-  <xs:complexType name="desertType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="name"/>
-      <xs:element type="locatedType" name="located" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="xs:int" name="area"/>
-      <xs:element type="xs:float" name="latitude" minOccurs="0"/>
-      <xs:element type="xs:float" name="longitude" minOccurs="0"/>
-    </xs:sequence>
-    <xs:attribute type="xs:string" name="id" use="optional"/>
-    <xs:attribute type="xs:string" name="country" use="optional"/>
-    <xs:attribute type="xs:string" name="type" use="optional"/>
-  </xs:complexType>
-  <xs:complexType name="airportType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="name"/>
-      <xs:element type="xs:float" name="latitude"/>
-      <xs:element type="xs:float" name="longitude"/>
-      <xs:element type="xs:short" name="elevation" minOccurs="0"/>
-      <xs:element type="xs:float" name="gmtOffset"/>
-      <xs:element type="located_onType" name="located_on" minOccurs="0"/>
-    </xs:sequence>
-    <xs:attribute type="xs:string" name="id" use="optional"/>
-    <xs:attribute type="xs:string" name="iatacode" use="optional"/>
-    <xs:attribute type="xs:string" name="city" use="optional"/>
-    <xs:attribute type="xs:string" name="country" use="optional"/>
-  </xs:complexType>
-  <xs:complexType name="mondialType">
-    <xs:sequence>
-      <xs:element type="countryType" name="country" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="continentType" name="continent" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="organizationType" name="organization" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="seaType" name="sea" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="riverType" name="river" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="lakeType" name="lake" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="islandType" name="island" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="mountainType" name="mountain" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="desertType" name="desert" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element type="airportType" name="airport" maxOccurs="unbounded" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="mountain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element ref="mountains" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="located" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:group ref="coordinates"/>
+        <xs:element ref="elevation" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="id-and-countries"/>
+      <xs:attribute name="type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="volcanic"/>
+            <xs:enumeration value="volcano"/>
+            <xs:enumeration value="granite"/>
+            <xs:enumeration value="monolith"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="island" type="xs:IDREF"/>
+      <xs:attribute name="last_eruption" type="xs:date"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="gmtOffset">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="-15"/>
+      <xs:maxInclusive value="15"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="gmtOffset" type="gmtOffset"/>
+
+  <xs:element name="airport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" maxOccurs="unbounded"/>
+        <xs:group ref="coordinates"/>
+        <xs:element ref="elevation" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="gmtOffset" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="located_on" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID"/>
+      <xs:attribute name="iatacode" type="xs:string"/>
+      <xs:attribute name="city" type="xs:IDREF"/>
+      <xs:attribute name="country" type="xs:IDREF"/>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

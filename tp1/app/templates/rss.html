@@ -5,15 +5,30 @@
     <h2>{{ title }}.</h2>
     <h3>{{ message }}</h3>
 
-    <p>Use this area to provide additional information.</p>
+    <p>A Actualidade Norte Americana:</p>
 
     <ul>
         {% for entry in feeds.entries %}
-            <li>
-                <a href="{{entry.link}}">{{entry.title}}</a>
-                <br>
-                {{ entry.summary|safe }}
-            </li>
+           <article id="noticia-principal">
+            <header id="cabecalho-artigo">
+                <style>
+                    ul#art_rss{
+                    font-size: 13pt;
+                    padding: 15px;
+                    border:solid 1px;
+                    border-radius:15px;
+                    background-color: #dddddd;
+                    }
+                </style>
+                 <ul id="art_rss">
+                     Noticia Principal:
+                    <a href="{{entry.link}}">{{entry.title}}</a>
+                    <br>
+                    {{ entry.summary|safe }}
+
+                 </ul>
+            </header>
+           </article>
         {% endfor %}
     </ul>
 

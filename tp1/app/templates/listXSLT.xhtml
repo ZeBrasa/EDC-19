@@ -11,13 +11,29 @@
         <h2>Countries</h2>
         <table border="1">
             <tr bgcolor="#9acd32">
-                <th align="left">Name</th>
+                <th align="left">Nome</th>
                 <th align="left">ID</th>
+                <th align="left">População</th>
+                <th align="left">area total</th>
+                <th align="left">Crescimento Populacional</th>
+                <th align="left">Mortalidade Infantil</th>
+                <th align="left">PIB</th>
+                <th align="left">Inflação</th>
+                <th align="left">Data da Independência</th>
+                <th align="left">Tipo de Governo</th>
             </tr>
             <xsl:for-each select="{{ elements }}">
                 <tr>
                     <td><xsl:value-of select="name"/></td>
                     <td><xsl:value-of select="id"/></td>
+                    <td><xsl:value-of select="population"/></td>
+                    <td><xsl:value-of select="total_area"/></td>
+                    <td><xsl:value-of select="population_growth"/></td>
+                    <td><xsl:value-of select="infant_mortality"/></td>
+                    <td><xsl:value-of select="gdp_total"/></td>
+                    <td><xsl:value-of select="inflation"/></td>
+                    <td><xsl:value-of select="indep_date"/></td>
+                    <td><xsl:value-of select="government"/></td>
                 </tr>
             </xsl:for-each>
         </table>

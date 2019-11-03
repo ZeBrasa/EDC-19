@@ -27,7 +27,7 @@ def home(request):
 def about(request):
     tparams = {
         'title': 'About',
-        'message': 'Your application description page.',
+        'message': 'Acerca do projecto',
         'year': datetime.now().year,
     }
     return render(request, 'about.html', tparams)
@@ -72,7 +72,7 @@ def rss(request):
 
     tparams = {
         'title': 'RSS',
-        'message': 'Your application description page.',
+        'message': 'Noticias da Imprensa Americana',
         'year': datetime.now().year,
         'feeds': feeds,
     }

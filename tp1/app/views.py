@@ -41,30 +41,36 @@ def list(request, selection, prev=None):
         print(prev)
         if prev == "continent":
             xpath = f'//*[@{prev}="{selection}"]/parent::*'
+            title = "'Countries'"
 
         elif ("cty" in selection) or ("city" in selection) or ("stadt" in selection):
             xpath = f'//*[@*="{selection}"]'
+            title = "'?'"
 
         elif "org" in selection:
             xpath = f'//*[@*="{selection}"]'
+            title = "'Organization'"
 
         else:
             xpath = f'//*[@id="{selection}"]/city'
+            title = "'Cities'"
 
     else:
         xpath = f'//{selection}'
+        title = f"'{selection}'"
 
     print(xpath)
 
     xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + xsl))
     transform = etree.XSLT(xslt_tree)
+    print(transform(root, selection=xpath, header=title))
     tparams = {
         'year': datetime.now().year,
         'current': selection,
-        'page': transform(root, selection=xpath),
+        'page': transform(root, selection=xpath, header=title),
     }
 
-    return render(request, 'listDisplay.html', tparams)
+    return render(request, 'xsltDisplay.html', tparams)
 
 
 def rss(request):

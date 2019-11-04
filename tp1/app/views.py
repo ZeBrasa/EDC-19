@@ -6,6 +6,7 @@ from django.shortcuts import render
 from datetime import datetime
 
 
+
 # Create your views here.
 
 from lxml import etree
@@ -26,7 +27,7 @@ def home(request):
 
 def about(request):
     tparams = {
-        'title': 'EDC 2019',
+        'title': 'About',
         'message': 'Acerca do projecto',
         'year': datetime.now().year,
     }
@@ -50,14 +51,7 @@ def list(request, selection, prev=None):
         elif "org" in selection:
             xpath = f'//*[@*="{selection}"]'
             title = "'Organization'"
-            '''
-            * Organization
-                name -> Nome da organização
-                abbrev -> Abreviatura
-                established -> Data de formação
-                type of member: member, associative member, regional member, nonregional member, observer, associative observer
-            '''
-            # xpath = f'//*[@id="{selection}"]/member'
+
         else:
             xpath = f'//*[@id="{selection}"]/city'
             title = "'Cities'"
@@ -68,7 +62,12 @@ def list(request, selection, prev=None):
 
     print(xpath)
 
-    xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + xsl))
+    if "continent" in selection:
+        xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + "listContinent.xsl"))
+    elif "org" in selection:
+        xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + "listOrg.xsl"))
+    else:
+        xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + xsl))
     transform = etree.XSLT(xslt_tree)
     print(transform(root, selection=xpath, header=title))
     tparams = {

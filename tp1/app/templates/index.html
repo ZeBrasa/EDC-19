@@ -3,30 +3,27 @@
 {% block content %}
 
 <div class="jumbotron">
-    <h1>Django</h1>
-    <p class="lead">Django is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    <h1>World data</h1>
+    <p class="lead">Learn more about the world!</p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Continents</h2>
         <p>
-            Django gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Find out what countries are on each continent
         </p>
-        <p><a class="btn btn-default" href="http://www.djangobook.com">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="{% url 'rootList' selection='continent' %}">Continents</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
-        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
+        <h2>Countries</h2>
+        <p>Find everything about your country. From population, to GDP, just from a click of a button</p>
+        <p><a class="btn btn-default" href="{% url 'rootList' selection='country' %}">Countries</a></p>
     </div>
     <div class="col-md-4">
-        <h2>pythonanywhere</h2>
-        <p>Host, run, and code Python in the cloud!</p>
-        <p><a class="btn btn-default" href="https://www.pythonanywhere.com/">Learn more &raquo;</a></p>
+        <h2>Organizations</h2>
+        <p>Did you even know we had this many organizations around the globe? Find which countries are on it</p>
+        <p><a class="btn btn-default" href="{% url 'rootList' selection='organization' %}">Organizations</a></p>
     </div>
 </div>
 

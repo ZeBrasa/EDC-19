@@ -7,6 +7,7 @@
         <h2>
             <xsl:value-of select="$header"/>
         </h2>
+
         <table border="1">
             <tr bgcolor="#9acd32">
                 <th align="left">Name</th>

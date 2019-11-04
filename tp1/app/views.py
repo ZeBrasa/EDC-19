@@ -26,7 +26,7 @@ def home(request):
 
 def about(request):
     tparams = {
-        'title': 'About',
+        'title': 'EDC 2019',
         'message': 'Acerca do projecto',
         'year': datetime.now().year,
     }
@@ -50,7 +50,14 @@ def list(request, selection, prev=None):
         elif "org" in selection:
             xpath = f'//*[@*="{selection}"]'
             title = "'Organization'"
-
+            '''
+            * Organization
+                name -> Nome da organização
+                abbrev -> Abreviatura
+                established -> Data de formação
+                type of member: member, associative member, regional member, nonregional member, observer, associative observer
+            '''
+            # xpath = f'//*[@id="{selection}"]/member'
         else:
             xpath = f'//*[@id="{selection}"]/city'
             title = "'Cities'"
@@ -70,7 +77,7 @@ def list(request, selection, prev=None):
         'page': transform(root, selection=xpath, header=title),
     }
 
-    return render(request, 'xsltDisplay.html', tparams)
+    return render(request, 'listDisplay.html', tparams)
 
 
 def rss(request):

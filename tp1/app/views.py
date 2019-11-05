@@ -35,8 +35,8 @@ def about(request):
 
 
 def list(request, selection, prev=None):
-    print(selection)
-    xsl = "list.xsl"
+    #print(selection)
+    xsl = "simpleList.xsl"
 
     if prev:
         print(prev)
@@ -53,30 +53,34 @@ def list(request, selection, prev=None):
             title = "'Organization'"
 
         else:
-            xpath = f'//*[@id="{selection}"]/city'
+            xpath = f'//*[@id="{selection}"]'
             title = "'Cities'"
+            xsl = 'country.xsl'
 
     else:
         xpath = f'//{selection}'
         title = f"'{selection}'"
 
-    print(xpath)
+    #print(xpath)
 
+    '''
     if "continent" in selection:
         xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + "listContinent.xsl"))
     elif "org" in selection:
         xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + "listOrg.xsl"))
     else:
-        xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + xsl))
+    '''
+
+    xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + xsl))
     transform = etree.XSLT(xslt_tree)
-    print(transform(root, selection=xpath, header=title))
+    #print(transform(root, selection=xpath, header=title))
     tparams = {
         'year': datetime.now().year,
         'current': selection,
         'page': transform(root, selection=xpath, header=title),
     }
 
-    return render(request, 'listDisplay.html', tparams)
+    return render(request, 'xsltDisplay.html', tparams)
 
 
 def rss(request):

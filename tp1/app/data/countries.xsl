@@ -9,6 +9,7 @@
                 <th align="left">ID</th>
             </tr>
             <xsl:for-each select="$selection">
+                <xsl:sort select="@name" order="ascending"/>
                 <tr>
                     <td><xsl:value-of select="@name"/></td>
                     <td><xsl:value-of select="@id"/></td>

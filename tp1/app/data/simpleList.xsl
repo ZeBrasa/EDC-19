@@ -13,6 +13,7 @@
                 <th align="left">ID</th>
             </tr>
             <xsl:for-each select="$selection">
+                <xsl:sort data-type="text" order="ascending"/>
                 <tr>
                     <td>
                         <a><xsl:attribute name='href'><xsl:value-of select='@id'/></xsl:attribute>

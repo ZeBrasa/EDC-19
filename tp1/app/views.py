@@ -27,7 +27,7 @@ def home(request):
 
 def about(request):
     tparams = {
-        'title': 'About',
+        'title': 'EDC 2019',
         'message': 'Acerca do projecto',
         'year': datetime.now().year,
     }
@@ -51,6 +51,7 @@ def list(request, selection, prev=None):
         elif "org" in selection:
             xpath = f'//*[@*="{selection}"]'
             title = "'Organization'"
+            xsl = 'listOrg.xsl'
 
         else:
             xpath = f'//*[@id="{selection}"]'

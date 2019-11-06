@@ -27,58 +27,43 @@ def home(request):
 
 def about(request):
     tparams = {
-        'title': 'EDC 2019',
+        'title': 'About',
         'message': 'Acerca do projecto',
         'year': datetime.now().year,
     }
     return render(request, 'about.html', tparams)
 
 
-def list(request, selection, prev=None):
+def list(request, selection):
     #print(selection)
     xsl = "simpleList.xsl"
 
-    if prev:
-        print(prev)
-        if prev == "continent":
-            xpath = f'//*[@{prev}="{selection}"]/parent::*'
-            title = "'Countries'"
-
-        elif ("cty" in selection) or ("city" in selection) or ("stadt" in selection):
-            xpath = f'//*[@*="{selection}"]'
-            title = "'?'"
-
-        elif "org" in selection:
-            xpath = f'//*[@*="{selection}"]'
-            title = "'Organization'"
-            xsl = 'listOrg.xsl'
-
-        else:
-            xpath = f'//*[@id="{selection}"]'
-            title = "'Cities'"
-            xsl = 'country.xsl'
-
-    else:
+    if selection == "continent" or selection == "country" or selection == "organization":
         xpath = f'//{selection}'
-        title = f"'{selection}'"
 
-    #print(xpath)
+    elif ("cty" in selection) or ("city" in selection) or ("stadt" in selection):
+        xpath = f'//*[@id="{selection}"]'
+        xsl = 'city.xsl'
 
-    '''
-    if "continent" in selection:
-        xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + "listContinent.xsl"))
+    elif ("europe" in selection) or ("asia" in selection) or ("africa" in selection) or ("america" in selection) or ("australia" in selection):
+        xpath = f'//country/encompassed[@continent="{selection}"]/parent::*'
+
     elif "org" in selection:
-        xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + "listOrg.xsl"))
+        xpath = f'//organization[@id="{selection}"]'
+        xsl = 'organization.xsl'
+
     else:
-    '''
+        xpath = f'//country[@id="{selection}"]'
+        xsl = 'country.xsl'
+    #print(xpath)
 
     xslt_tree = etree.parse(os.path.join(BASE_DIR, 'app/data/' + xsl))
     transform = etree.XSLT(xslt_tree)
-    #print(transform(root, selection=xpath, header=title))
+    print(transform(root, selection=xpath))
     tparams = {
         'year': datetime.now().year,
         'current': selection,
-        'page': transform(root, selection=xpath, header=title),
+        'page': transform(root, selection=xpath),
     }
 
     return render(request, 'xsltDisplay.html', tparams)

@@ -38,7 +38,7 @@
                 </tr>
                 <tr>
                     <th scope="row"> Elevation</th>
-                    <td><xsl:value-of select="$selection/elevation"/></td>
+                    <td><xsl:value-of select="$selection/elevation"/> meters</td>
                 </tr>
                 <tr class="mergedtoprow" style="height: 18px;">
                     <th style="text-align: left; height: 18px; width: 438px;" colspan="2"> Population</th>

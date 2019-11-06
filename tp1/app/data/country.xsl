@@ -113,7 +113,7 @@
                                 <th style="height: 18px; width: 428px;" scope="row">
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> 2011 census</div>
                                 </th>
-                                <td style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/population"/>
+                                <td style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/population[last()]"/>
                                     <sup id="cite_ref-10-1" class="reference"></sup>
                                 </td>
                             </tr>
@@ -123,14 +123,14 @@
                                 </th>
                                 <td style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/population_growth"/>
                                     <br />
-                                    <sup id="cite_ref-imf2_10-2" class="reference"></sup>
+                                    <sup id="cite_ref-imf2_10-2" class="reference">%</sup>
                                 </td>
                             </tr>
                             <tr class="mergedbottomrow" style="height: 18px;">
                                 <th style="height: 18px; width: 428px;" scope="row">
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Infant Mortality</div>
                                 </th>
-                                <td style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/infant_mortality"/></td>
+                                <td style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/infant_mortality"/> per-mille</td>
                             </tr>
                             <tr class="mergedtoprow" style="height: 18px;">
                                 <th style="height: 18px; width: 428px;" scope="row">GDP </th>
@@ -142,7 +142,7 @@
                                 </th>
                                 <td class="mergedrow" style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/gdp_total"/>
                                     <br />
-                                    <sup id="cite_ref-imf2_11-1" class="reference"></sup>
+                                    <sup id="cite_ref-imf2_11-1" class="reference">Million Dollars</sup>
                                 </td>
                             </tr>
                             <tr class="mergedrow" style="height: 18px;">
@@ -151,7 +151,7 @@
                                 </th>
                                 <td class="mergedrow" style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/gdp_agri"/>
                                     <br />
-                                    <sup id="cite_ref-imf2_11-2" class="reference"></sup>
+                                    <sup id="cite_ref-imf2_11-2" class="reference">%</sup>
                                 </td>
                             </tr>
                             <tr class="mergedrow" style="height: 18px;">
@@ -160,7 +160,7 @@
                                 </th>
                                 <td style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/gdp_ind"/>
                                     <br />
-                                    <sup id="cite_ref-imf2_11-3" class="reference"></sup>
+                                    <sup id="cite_ref-imf2_11-3" class="reference">%</sup>
                                 </td>
                             </tr>
                             <tr class="mergedrow" style="height: 18px;">
@@ -169,7 +169,7 @@
                                 </th>
                                 <td class="mergedtoprow" style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/gdp_serv"/>
                                     <br />
-                                    <sup id="cite_ref-imf2_11-4" class="reference"></sup>
+                                    <sup id="cite_ref-imf2_11-4" class="reference">%</sup>
                                 </td>
                             </tr>
                             <tr>
@@ -185,6 +185,7 @@
                         <h3>Cities:</h3>
                         <ul>
                             <xsl:for-each select="$selection//city">
+                                <xsl:sort data-type="text" order="ascending"/>
                                 <li style="white-space: nowrap;">
                                     <a><xsl:attribute name='href'><xsl:value-of select='./@id'/></xsl:attribute>
                                         <xsl:value-of select="./name"/>

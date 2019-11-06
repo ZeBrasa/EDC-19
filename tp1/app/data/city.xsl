@@ -47,7 +47,7 @@
                     <th style="height: 18px; width: 428px;" scope="row">
                         <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> 2011 census</div>
                     </th>
-                    <td style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/population"/>
+                    <td style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/population[last()]"/>
                         <sup id="cite_ref-10-1" class="reference"></sup>
                     </td>
                 </tr>

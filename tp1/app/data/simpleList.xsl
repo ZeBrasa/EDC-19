@@ -3,11 +3,7 @@
     <xsl:output method = "html" encoding = "utf8" indent = "yes"/>
     <xsl:param name="selection"/>
     <xsl:template match="/">
-        <table border="1">
-            <tr bgcolor="#9acd32">
-                <th align="left">Name</th>
-                <th align="left">ID</th>
-            </tr>
+        <table>
             <xsl:for-each select="$selection">
                 <xsl:sort data-type="text" order="ascending"/>
                 <tr>
@@ -16,7 +12,6 @@
                             <xsl:value-of select="./name/text()"/>
                         </a>
                     </td>
-                    <td><xsl:value-of select="@id"/></td>
                 </tr>
             </xsl:for-each>
         </table>

@@ -48,7 +48,7 @@
 
                                     <xsl:for-each select="$root">
                                         <xsl:variable name="country" select="key('countryById', $countryId)"/>
-                                        <li>
+                                        <li style="white-space: nowrap;">
                                             <a><xsl:attribute name='href'><xsl:value-of select='$country/@id'/></xsl:attribute>
                                                 <xsl:value-of select="$country/name"/>
                                             </a>

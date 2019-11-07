@@ -3,6 +3,7 @@
     xmlns:exsl="http://exslt.org/common">
 
     <xsl:key name="cityById" match="city" use="@id"/>
+    <xsl:key name="countryById" match="country" use="@id"/>
     <xsl:key name="orgById" match="organization" use="@id"/>
     <xsl:output method = "html" encoding = "utf8" indent = "yes"/>
     <xsl:param name="selection"/>
@@ -77,7 +78,7 @@
                             </tr>
                             <tr>
                                 <th scope="row"> Independence</th>
-                                <td>In  <xsl:value-of select="$selection/indep_date"/> from  <xsl:value-of select="$selection/indep_date/@from"/></td>
+                                <td>In  <xsl:value-of select="$selection/indep_date"/> from  <xsl:value-of select="key('countryById', $selection/indep_date/@from)/name | $selection/indep_date/@from"/></td>
                             </tr>
                             <tr>
                                 <th scope="row"> Government</th>
@@ -104,7 +105,7 @@
                                 <th style="height: 18px; width: 428px;" scope="row">
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Border</div>
                                 </th>
-                                <td style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/border.length"/></td>
+                                <td style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/border/@length"/> km</td>
                             </tr>
                             <tr class="mergedtoprow" style="height: 18px;">
                                 <th style="text-align: left; height: 18px; width: 438px;" colspan="2"> Population</th>
@@ -122,8 +123,8 @@
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Growth</div>
                                 </th>
                                 <td style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/population_growth"/>
-                                    <br />
-                                    <sup id="cite_ref-imf2_10-2" class="reference">%</sup>
+                                    
+                                    <sup id="cite_ref-imf2_10-2" class="reference"> %</sup>
                                 </td>
                             </tr>
                             <tr class="mergedbottomrow" style="height: 18px;">
@@ -141,8 +142,8 @@
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Total</div>
                                 </th>
                                 <td class="mergedrow" style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/gdp_total"/>
-                                    <br />
-                                    <sup id="cite_ref-imf2_11-1" class="reference">Million Dollars</sup>
+                                    
+                                    <sup id="cite_ref-imf2_11-1" class="reference"> Million Dollars</sup>
                                 </td>
                             </tr>
                             <tr class="mergedrow" style="height: 18px;">
@@ -150,8 +151,8 @@
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Agriculture</div>
                                 </th>
                                 <td class="mergedrow" style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/gdp_agri"/>
-                                    <br />
-                                    <sup id="cite_ref-imf2_11-2" class="reference">%</sup>
+                                   
+                                    <sup id="cite_ref-imf2_11-2" class="reference"> %</sup>
                                 </td>
                             </tr>
                             <tr class="mergedrow" style="height: 18px;">
@@ -159,8 +160,8 @@
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Industry</div>
                                 </th>
                                 <td style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/gdp_ind"/>
-                                    <br />
-                                    <sup id="cite_ref-imf2_11-3" class="reference">%</sup>
+                              
+                                    <sup id="cite_ref-imf2_11-3" class="reference"> %</sup>
                                 </td>
                             </tr>
                             <tr class="mergedrow" style="height: 18px;">
@@ -168,8 +169,8 @@
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Services</div>
                                 </th>
                                 <td class="mergedtoprow" style="height: 18px; width: 10px;"> <xsl:value-of select="$selection/gdp_serv"/>
-                                    <br />
-                                    <sup id="cite_ref-imf2_11-4" class="reference">%</sup>
+                                 
+                                    <sup id="cite_ref-imf2_11-4" class="reference"> %</sup>
                                 </td>
                             </tr>
                             <tr>

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h2>{{ title }}.</h2>
+    <h3>{{ message }}</h3>
+
+    <div>
+        {% for elem in elements %}
+
+               {{ elem.0 }}
+            <br>
+        {% endfor %}
+    </div>
+
+{% endblock %}

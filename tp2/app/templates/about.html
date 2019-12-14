@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+
+<p>Informações incluídas no XML.</p>
+
+    <style>
+        ol#princ{
+            font-size: 13pt;
+            padding: 35px;
+            border:solid 1px;
+            border-radius:10px;
+            background-color: #dddddd;
+        }
+    </style>
+
+    <ol id="princ">
+        <li>ID</li>
+        <li>Nome</li>
+        <li>População</li>
+        <li>Area Total</li>
+        <li>Crescimento Populacional</li>
+        <li>Mortalidade Infantil</li>
+        <li>PIB</li>
+        <li>Inflação</li>
+        <li>Províncias</li>
+        <li>cidades</li>
+            <ul>
+                <li>Coordenadas</li>
+                <li>Nome da Cidade</li>
+                <li>População com o ano da contagem</li>
+                <li>Localização geográfica</li>
+            </ul>
+        <li>Grupos Étnicos</li>
+        <li>Percentagem de grupos relegiosos</li>
+        <li>Fronteiras</li>
+    </ol>
+
+    <p>Alunos Envolvidos no Projecto</p>
+        <ul>
+            <li>Xavier Santos, Número Mec. 68271</li>
+            <li>José Brás, Número Mec. 74029</li>
+            <li>Rúben Marinho, Número Mec. 40115</li>
+        </ul>
+
+{% endblock %}

@@ -19,7 +19,6 @@ from app import views
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^about/$', views.about, name='about'),
-    url(r'^countries/$', views.countries, name='countries'),
-    #url(r'^(?P<selection>[-\w]+)/$', views.list, name='rootList'),
-    #url(r'^([^/]+\/)*(?P<selection>[-\w]+)/$', views.list, name='list'),
+    url(r'^(?P<selection>[-\w]+)/$', views.list, name='rootList'),
+    url(r'^([^/]+\/)*(?P<selection>[-\w]+)/$', views.list, name='list'),
 ]

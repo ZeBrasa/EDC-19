@@ -13,17 +13,17 @@
         <p>
             Find out what countries are on each continent
         </p>
-        <p><a class="btn btn-default" href="{% url 'home' %}">Continents</a></p>
+        <p><a class="btn btn-default" href="{% url 'element' selection='http://www.semwebtech.org/mondial/10/meta#Continent' %}">Continents</a></p>
     </div>
     <div class="col-md-4">
         <h2>Countries</h2>
         <p>Find everything about your country. From population, to GDP, just from a click of a button</p>
-        <p><a class="btn btn-default" href="{% url 'rootList' selection='Country' %}">Countries</a></p>
+        <p><a class="btn btn-default" href="{% url 'element' selection='http://www.semwebtech.org/mondial/10/meta#Country' %}">Countries</a></p>
     </div>
     <div class="col-md-4">
         <h2>Organizations</h2>
         <p>Did you even know we had this many organizations around the globe? Find which countries are on it</p>
-        <p><a class="btn btn-default" href="{% url 'home' %}">Organizations</a></p>
+        <p><a class="btn btn-default" href="{% url 'element' selection='http://www.semwebtech.org/mondial/10/meta#Organization' %}">Organizations</a></p>
     </div>
 </div>
 

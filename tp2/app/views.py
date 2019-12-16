@@ -1,3 +1,5 @@
+import urllib
+
 from django.shortcuts import render
 from datetime import datetime
 
@@ -40,30 +42,82 @@ def about(request):
     return render(request, 'about.html', tparams)
 
 
-def list(request, selection):
-    query = (
-            """
-            prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
-            prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            select ?cname ?country
-            where {
-                ?country rdf:type mon:%s .
-                ?country mon:name ?cname
-            }
-            """
-            % selection)
-    #print(query)
+def element(request, selection):
+    selection = urllib.parse.unquote(selection)
+    elemType = selection.split("/")[-3]
+    print(elemType)
+
+    if elemType == 'mondial':
+        query = (
+                """
+                prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+                prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                select ?name ?item
+                where {
+                    ?item rdf:type <%s> .
+                    ?item mon:name ?name
+                }
+                """
+                % selection)
+
+    elif elemType == 'continents':
+        query = (
+                """
+                prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+                select ?name ?item
+                where {
+                    ?item mon:encompassed <%s> .
+                    ?item mon:name ?name
+                }
+                """
+                % selection)
+
+    else:
+        query = (
+                """
+                prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+                prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                select ?is ?what ?name
+                where {
+                    <%s> ?is ?what .
+                    optional { ?what mon:name ?name }
+                }
+                """
+                % selection)
+
     payload_query = {"query": query}
     res = accessor.sparql_select(body=payload_query,
                                  repo_name=repo_name)
     res = json.loads(res)
+
+    if elemType == "mondial" or elemType == "continents":
+        tparams = {
+            'title': selection,
+            'message': 'Your application description page.',
+            'year': datetime.now().year,
+            'elements': res['results']['bindings'],
+        }
+        return render(request, 'list.html', tparams)
+
+    info = {}
     for e in res['results']['bindings']:
-        print(e)
+        if 'name' in e:
+            info.update({e['is']['value'].split("#", 1)[1]: e['name']['value']})
+        else:
+            info.update({e['is']['value'].split("#", 1)[1]: e['what']['value']})
 
     tparams = {
         'title': selection,
         'message': 'Your application description page.',
         'year': datetime.now().year,
-        'elements': res['results']['bindings'],
+        'info': info,
     }
-    return render(request, 'list.html', tparams)
+
+    if elemType == "countries":
+        return render(request, 'country.html', tparams)
+
+    elif elemType == "cities":
+        return render(request, 'city.html', tparams)
+
+    elif elemType == "organizations":
+        return render(request, 'org.html', tparams)

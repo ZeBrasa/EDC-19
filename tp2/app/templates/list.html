@@ -7,7 +7,7 @@
 
     <div>
         {% for elem in elements %}
-            <a href="">{{ elem.cname.value }}</a>
+            <a href="{% url 'element' selection=elem.item.value|urlencode %}">{{ elem.name.value }}</a>
             <br>
         {% endfor %}
     </div>

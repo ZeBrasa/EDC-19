@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <table class="infobox geography vcard" style="width: 384px; font-size: 88%;">
+                        <tbody>
+                            <tr style="height: 48px;">
+                                <th class="adr" style="text-align: center; font-size: 1.25em; font-weight: bold; padding: 0.25em 0.33em 0.33em; line-height: 1.2em; height: 48px; width: 438px;" colspan="2">
+                                    {{ info.name }}
+                                    <br />
+                                    <div style="padding-top: 0.25em; font-weight: normal;">
+                                        {{ info.localname }}
+                                    </div>
+                                </th>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+{% endblock %}

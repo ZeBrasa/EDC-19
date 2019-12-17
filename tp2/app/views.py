@@ -130,13 +130,14 @@ def element(request, selection):
 def apply_inference():
 
     # dictionary for the rule
-    rule = rules.postalcode_rule
+    rule = rules.code_country
 
+    # carCode = 2 letter code of the country
     q_str = """ 
             prefix ns0: <http://xmlns.com/foaf/spec/>
             select distinct ?v
             where{
-                ?sub ns0:target_pc ?v
+                ?sub ns0: carCode ?v
             }
             """
     result = query(q_str)
@@ -144,30 +145,31 @@ def apply_inference():
     for r in result:
         value = r['v']['value']
         for pc in rule.keys():
+            #incerto aqui neste if se está a fazer correctamente
             if int(value.split("-")[0]) >= pc[0] and int(value.split("-")[0]) <= pc[1]:
                 region = rule[pc]
-
-                q_region = """
+                # country code and the local name
+                q_regional = """
                             prefix ns0: <http://xmlns.com/foaf/spec/>
                             select distinct ?o
                             where {
-                                ?s ns0:target_pc '""" + value + """'.
-                                ?s ns0:target_region ?o.
+                                ?s ns0:carCode '""" + value + """'.
+                                ?s ns0:localname ?o.
                             }
                             """
-                res = query(q_region)
+                res = query(q_regional)
                 try:
                     reg = res['results']['bindings'][0]['o']['value']
                     region = reg.split()[0].replace(",", "") + ", " + region
                 except Exception:
                     reg = ""
 
-                qstr = """ 
+                qstr = """ 8
                             prefix ns0: <http://xmlns.com/foaf/spec/>
-                            delete {?sub ns0:target_region '""" + reg + """'}
-                            where {?sub ns0:target_pc '""" + value + """'};
-                            insert {?sub ns0:target_region '""" + region + """'}
-                            where {?sub ns0:target_pc '""" + value + """'}
+                            delete {?sub ns0:localname '""" + reg + """'}
+                            where {?sub ns0:codeCar '""" + value + """'};
+                            insert {?sub ns0:localname '""" + region + """'}
+                            where {?sub ns0:codeCar '""" + value + """'}
                             """
                 print(qstr)
                 query(qstr)

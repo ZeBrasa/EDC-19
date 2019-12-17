@@ -7,6 +7,8 @@ import json
 from s4api.graphdb_api import GraphDBApi
 from s4api.swagger import ApiClient
 
+from app import rules
+
 endpoint = "http://localhost:7200"
 repo_name = "mondial"
 client = ApiClient(endpoint=endpoint)
@@ -121,3 +123,67 @@ def element(request, selection):
 
     elif elemType == "organizations":
         return render(request, 'org.html', tparams)
+
+# generate new triples based on postal code and phone number
+
+
+def apply_inference():
+
+    # dictionary for the rule
+    rule = rules.postalcode_rule
+
+    q_str = """ 
+            prefix ns0: <http://xmlns.com/foaf/spec/>
+            select distinct ?v
+            where{
+                ?sub ns0:target_pc ?v
+            }
+            """
+    result = query(q_str)
+    result = result['results']['bindings']
+    for r in result:
+        value = r['v']['value']
+        for pc in rule.keys():
+            if int(value.split("-")[0]) >= pc[0] and int(value.split("-")[0]) <= pc[1]:
+                region = rule[pc]
+
+                q_region = """
+                            prefix ns0: <http://xmlns.com/foaf/spec/>
+                            select distinct ?o
+                            where {
+                                ?s ns0:target_pc '""" + value + """'.
+                                ?s ns0:target_region ?o.
+                            }
+                            """
+                res = query(q_region)
+                try:
+                    reg = res['results']['bindings'][0]['o']['value']
+                    region = reg.split()[0].replace(",", "") + ", " + region
+                except Exception:
+                    reg = ""
+
+                qstr = """ 
+                            prefix ns0: <http://xmlns.com/foaf/spec/>
+                            delete {?sub ns0:target_region '""" + reg + """'}
+                            where {?sub ns0:target_pc '""" + value + """'};
+                            insert {?sub ns0:target_region '""" + region + """'}
+                            where {?sub ns0:target_pc '""" + value + """'}
+                            """
+                print(qstr)
+                query(qstr)
+
+    return
+
+
+def query(str):
+    query = str
+
+    payload_query = {"query": query}
+    try:
+        res = accessor.sparql_select(body=payload_query, repo_name=repo_name)
+        res = json.loads(res)
+        return res
+    except Exception:
+        payload_query = {"update": query}
+        res = accessor.sparql_update(body=payload_query, repo_name=repo_name)
+        print(res)

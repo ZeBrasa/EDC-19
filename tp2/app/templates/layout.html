@@ -15,7 +15,8 @@
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/wiki.css' %}">
-    
+    <link rel="shortcut icon" type="image/png" href="{% static 'ico/favicon.ico' %}"/>
+
   </head>
 
   <body>
@@ -37,13 +38,13 @@
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'element' selection='http://www.semwebtech.org/mondial/10/meta#Continent' %}">Continents</a>
+                    <a class="nav-link" href="{% url 'element' selection='http://www.semwebtech.org/mondial/10/meta#Continent'|urlencode %}">Continents</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'element' selection='http://www.semwebtech.org/mondial/10/meta#Country' %}">Countries</a>
+                    <a class="nav-link" href="{% url 'element' selection='http://www.semwebtech.org/mondial/10/meta#Country'|urlencode %}">Countries</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'element' selection='http://www.semwebtech.org/mondial/10/meta#Organization' %}">Organizations</a>
+                    <a class="nav-link" href="{% url 'element' selection='http://www.semwebtech.org/mondial/10/meta#Organization'|urlencode %}">Organizations</a>
                 </li>
             </ul>
           </div>
@@ -68,6 +69,7 @@
         <script src="{% static 'scripts/jquery-3.4.1.min.js' %}"></script>
         <script src="{% static 'scripts/popper.min.js' %}"></script>
         <script src="{% static 'scripts/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'scripts/dynamic-form.js' %}"></script>
    </div>
   </body>
 </html>

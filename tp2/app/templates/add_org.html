@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div id="myForm">
+
+        <h1><a>Untitled Form</a></h1>
+        <form id="form_93113" class="form-main" method="post" action=".">
+            {% csrf_token %}
+            <div class="form_description">
+                <h2>Untitled Form</h2>
+                <p>This is your form description. Click here to edit.</p>
+            </div>
+            <ul >
+
+                <li id="li_1" >
+                    <label class="description" for="name">Organization name: </label>
+                    <div>
+                        <input id="name" name="name" class="element text medium" type="text" maxlength="255" value=""/>
+                    </div>
+                </li>		<li id="li_2" >
+                <label class="description" for="acro">Organization Acronim </label>
+                <div>
+                    <input id="acro" name="acro" class="element text medium" type="text" maxlength="255" value=""/>
+                </div>
+            </li>
+                <li id="li_3" >
+                    <label class="description" for="member">Members: </label>
+                    <div id="clonedSection1" class="clonedSection">
+                        <select class="element select medium" id="members" name="members[]">
+                            <option value="" selected="selected"></option>
+                            {% for country in countries %}
+                                <option value="{{ country.item.value }}">{{ country.name.value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <input type="button" id="btnAdd" value="ADD" />
+                        <input type="button" id="btnDel" value="REMOVE" />
+                    </div>
+                </li>
+                <li class="buttons">
+                    <input type="hidden" name="form_id" value="93113" />
+                    <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+                </li>
+            </ul>
+        </form>
+    </div>
+
+{% endblock %}

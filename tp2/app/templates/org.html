@@ -24,11 +24,23 @@
                             </tr>
                             <tr class="mergedtoprow" style="height: 18px;">
                                 <th style="text-align: left; height: 18px; width: 438px;" colspan="2"> Members</th>
+                                {% for country in info.general.hasMember.name %}
+                                <td style="white-space: nowrap;">
+                                       {{ country }}
+
+                                </td>
+                                {% endfor %}
                             </tr>
                             <th scope="row"> Headquarters location</th>
+                                {% if info.hasHeadq.name == null %}
                                 <td style="white-space: nowrap;">
-                                    {{ info.general.hasHeadq.name }}
+                                        No Headquarters
                                 </td>
+                                {% else %}
+                                <td style="white-space: nowrap;">
+                                    {{ info.hasHeadq.name }}
+                                </td>
+                                {% endif %}
                             </tr>
                         </tbody>
                     </table>

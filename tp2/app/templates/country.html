@@ -39,7 +39,7 @@
                                 </th>
                                  <td>
                                     <ul>
-                                        {% for key in info.general.languageInfo.onLanguage %}
+                                        {% for key in info.languageInfo.onLanguage %}
                                         <div>
                                             {{ key }}
                                         </div>
@@ -74,7 +74,7 @@
                             <tr>
                                 <th scope="row"> Independence</th>
                                 <ul>
-                                        <td> In  {{ info.general.independenceDate }} from {{ info.general.wasDependentOf.name}}  </td>
+                                        <td> In  {{ info.general.independenceDate }} from {{ info.wasDependentOf.name}}  </td>
                                 </ul>
 
                             </tr>
@@ -182,9 +182,9 @@
                 </div>
                 <div class="col-sm">
                     <div class="plainlist">
-                        <h3>Counties/States:</h3>
+                        <h3>Cities:</h3>
                         <ul>
-                                {% for keys in info.hasProvince.name %}
+                                {% for keys in info.hasCity.name %}
                                 <li style="white-space: nowrap;">
                                     <a>
                                         <a class="url" href="{{ keys }}"/>{{ keys }}</a>

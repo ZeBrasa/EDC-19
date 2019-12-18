@@ -79,7 +79,7 @@ def element(request, selection):
         query = (
                 """
                 prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
-                select distinct ?attribute ?is ?what
+                select distinct ?attribute ?is ?what ?name
                 where {
                     {
                         <%s> ?attribute ?is .
@@ -89,6 +89,7 @@ def element(request, selection):
                     {
                         ?who ?is ?what .
                         <%s> ?attribute ?who
+                        optional { ?what mon:name ?name }
                     }      
                 }
                 """
@@ -101,8 +102,6 @@ def element(request, selection):
 
     if elemType == "mondial" or elemType == "continents":
         tparams = {
-            'title': selection,
-            'message': 'Your application description page.',
             'year': datetime.now().year,
             'elements': res['results']['bindings'],
         }
@@ -117,6 +116,8 @@ def element(request, selection):
             sub_attr = sub_attr.split("#", 1)[1]
         if 'what' in e:
             val = e['what']['value']
+        if 'name' in e:
+            val = (val, e['name']['value'])
 
         if "node" not in val and "node" not in sub_attr:
             if val != "":
@@ -125,8 +126,8 @@ def element(request, selection):
                 elif sub_attr not in info[attr]:
                     info[attr].update({sub_attr: val})
                 elif val not in info[attr][sub_attr]:
-                    info[attr][sub_attr] = [info[attr][sub_attr]] if isinstance(info[attr][sub_attr], str) else \
-                    info[attr][sub_attr]
+                    info[attr][sub_attr] = [info[attr][sub_attr]] if isinstance(info[attr][sub_attr], (str, tuple))\
+                        else info[attr][sub_attr]
                     info[attr][sub_attr].append(val)
 
             else:

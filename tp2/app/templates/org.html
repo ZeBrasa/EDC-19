@@ -8,32 +8,26 @@
                     <table class="infobox geography vcard" style="width: 384px; font-size: 88%;">
                         <tbody>
                             <tr style="height: 48px;">
-                                {% for key in info.name %}
                                 <th class="adr" style="text-align: center; font-size: 1.25em; font-weight: bold; padding: 0.25em 0.33em 0.33em; line-height: 1.2em; height: 48px; width: 438px;" colspan="2">
-                                    {{ key }}
+                                    {{ info.general.name }}
                                     <br />
-                                    {% for key2 in info.abbrev %}
                                     <div style="padding-top: 0.25em; font-weight: normal;">
-                                        {{ key2 }}
+                                        {{ info.general.abbrev  }}
                                     </div>
-                                        {% endfor %}
                                 </th>
-                                {% endfor %}
                             </tr>
                             <tr>
                             <th scope="row"> Established</th>
-                                {% for key in info.established %}
                                 <td style="white-space: nowrap;">
-                                    {{ key }}
+                                    {{ info.general.established }}
                                 </td>
-                                {% endfor %}
                             </tr>
                             <tr class="mergedtoprow" style="height: 18px;">
                                 <th style="text-align: left; height: 18px; width: 438px;" colspan="2"> Members</th>
                             </tr>
                             <th scope="row"> Headquarters location</th>
                                 <td style="white-space: nowrap;">
-                                    {{ info.hasHeadq.name }}
+                                    {{ info.general.hasHeadq.name }}
                                 </td>
                             </tr>
                         </tbody>

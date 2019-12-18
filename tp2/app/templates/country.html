@@ -39,9 +39,9 @@
                                 </th>
                                  <td>
                                     <ul>
-                                        {% for key in info.languageInfo.onLanguage.name  %}
+                                        {% for key in info.general.languageInfo.onLanguage %}
                                         <div>
-                                            {{ info.languageInfo.onLanguage.name }}
+                                            {{ key }}
                                         </div>
                                         {% endfor %}
                                     </ul>
@@ -52,8 +52,8 @@
                                 <td>
                                     <div class="plainlist">
                                         <ul>
-                                                {% for key in info.general.ethnicgroup %}
-                                                <li style="white-space: nowrap;"> {{ key }} % </li>
+                                                {% for key in info.general.ethnicInfo.onEthnicGroup %}
+                                                <li style="white-space: nowrap;"> {{ info.general.ethnicInfo.onEthnicGroup.1 }} % </li>
                                                 {% endfor %}
                                         </ul>
                                     </div>
@@ -63,9 +63,9 @@
                                 <th scope="row"> Religion</th>
                                 <td>
                                     <div class="plainlist">
-                                        {% for keys in info.religionInfo.onReligion.name %}
+                                        {% for keys in info.general.religionInfo.onReligion %}
                                         <ul>
-                                                <li style="white-space: nowrap;"> info.religionInfo.onReligion.name</li>
+                                                <li style="white-space: nowrap;"> {{info.religionInfo.onReligion.0.1}}</li>
                                         </ul>
                                         {% endfor %}
                                     </div>
@@ -74,18 +74,14 @@
                             <tr>
                                 <th scope="row"> Independence</th>
                                 <ul>
-                                    {% for key in info.independenceDate %}
-                                        <td> In  {{ key }} from {{ info.wasDependentOf.name}}  </td>
-                                    {% endfor %}
+                                        <td> In  {{ info.general.independenceDate }} from {{ info.general.wasDependentOf.name}}  </td>
                                 </ul>
 
                             </tr>
                             <tr>
                                 <th scope="row"> Government</th>
                                 <ul>
-                                    {% for key in info.government %}
-                                        <td> {{key}}  </td>
-                                    {% endfor %}
+                                        <td> {{info.general.government }}  </td>
                                 </ul>
                             </tr>
                             <tr style="display: none; height: 10px;">
@@ -98,17 +94,15 @@
                                 <th style="height: 18px; width: 428px;" scope="row">
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Total</div>
                                 </th>
-                                {% for key in info.area %}
-                                <td style="height: 18px; width: 10px;"> {{ key }} km
+                                <td style="height: 18px; width: 10px;"> {{ info.general.area }} km
                                     <sup>2</sup>
                                 </td>
-                                {% endfor %}
                             </tr>
                             <tr class="mergedbottomrow" style="height: 18px;">
                                 <th style="height: 18px; width: 428px;" scope="row">
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Border</div>
                                 </th>
-                                <td style="height: 18px; width: 10px;"> {{ item.hasBorder.length }} km</td>
+                                <td style="height: 18px; width: 10px;"> {{ item.general.hasBorder.length }} km</td>
                             </tr>
                             <tr class="mergedtoprow" style="height: 18px;">
                                 <th style="text-align: left; height: 18px; width: 438px;" colspan="2"> Population</th>
@@ -117,31 +111,25 @@
                                 <th style="height: 18px; width: 428px;" scope="row">
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> 2011 census</div>
                                 </th>
-                                {% for key in info.population %}
-                                <td style="height: 18px; width: 10px;"> {{key}}
+                                <td style="height: 18px; width: 10px;"> {{ info.general.population}}
                                     <sup id="cite_ref-10-1" class="reference">
                                     </sup>
                                 </td>
-                                {% endfor %}
                             </tr>
                             <tr class="mergedrow" style="height: 18px;">
                                 <th style="height: 18px; width: 428px;" scope="row">
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Growth</div>
                                 </th>
-                                {% for key in info.populationGrowth %}
-                                <td style="height: 18px; width: 10px;"> {{ key }}
+                                <td style="height: 18px; width: 10px;"> {{ info.general.populationGrowth }}
 
                                     <sup id="cite_ref-imf2_10-2" class="reference"> %</sup>
                                 </td>
-                                {% endfor %}
                             </tr>
                             <tr class="mergedbottomrow" style="height: 18px;">
                                 <th style="height: 18px; width: 428px;" scope="row">
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Infant Mortality</div>
                                 </th>
-                                {% for key in info.infantMortality %}
-                                <td style="height: 18px; width: 10px;"> {{key}} per-mille</td>
-                                {% endfor %}
+                                <td style="height: 18px; width: 10px;"> {{info.general.infantMortality}} per-mille</td>
                             </tr>
                             <tr class="mergedtoprow" style="height: 18px;">
                                 <th style="height: 18px; width: 428px;" scope="row">GDP </th>
@@ -151,45 +139,37 @@
                                 <th style="height: 18px; width: 428px;" scope="row">
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Total</div>
                                 </th>
-                                {% for key in info.gdpTotal %}
-                                <td class="mergedrow" style="height: 18px; width: 10px;"> {{ key }}
+                                <td class="mergedrow" style="height: 18px; width: 10px;"> {{ info.general.gdpTotal }}
 
                                     <sup id="cite_ref-imf2_11-1" class="reference"> Million Dollars</sup>
                                 </td>
-                                {% endfor %}
                             </tr>
                             <tr class="mergedrow" style="height: 18px;">
                                 <th style="height: 18px; width: 428px;" scope="row">
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Agriculture</div>
                                 </th>
-                                {% for key in info.gdpAgri %}
-                                <td class="mergedrow" style="height: 18px; width: 10px;"> {{ key }}
+                                <td class="mergedrow" style="height: 18px; width: 10px;"> {{ info.general.gdpAgri }}
 
                                     <sup id="cite_ref-imf2_11-2" class="reference"> %</sup>
                                 </td>
-                                {% endfor %}
                             </tr>
                             <tr class="mergedrow" style="height: 18px;">
                                 <th style="height: 18px; width: 428px;" scope="row">
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Industry</div>
                                 </th>
-                                {% for key in info.gdpInd %}
-                                <td style="height: 18px; width: 10px;"> {{ key }}
+                                <td style="height: 18px; width: 10px;"> {{ info.general.gdpInd }}
 
                                     <sup id="cite_ref-imf2_11-3" class="reference"> %</sup>
                                 </td>
-                                {% endfor %}
                             </tr>
                             <tr class="mergedrow" style="height: 18px;">
                                 <th style="height: 18px; width: 428px;" scope="row">
                                     <div style="text-indent: -0.9em; margin-left: 1.2em; font-weight: normal;"> Services</div>
                                 </th>
-                                {% for key in info.gdpServ %}
-                                <td class="mergedtoprow" style="height: 18px; width: 10px;"> {{ key }}
+                                <td class="mergedtoprow" style="height: 18px; width: 10px;"> {{ info.general.gdpServ }}
 
                                     <sup id="cite_ref-imf2_11-4" class="reference"> %</sup>
                                 </td>
-                                {% endfor %}
                             </tr>
                             <tr>
                                 <th scope="row">Car code</th>
@@ -202,7 +182,7 @@
                 </div>
                 <div class="col-sm">
                     <div class="plainlist">
-                        <h3>Cities:</h3>
+                        <h3>Counties/States:</h3>
                         <ul>
                                 {% for keys in info.hasProvince.name %}
                                 <li style="white-space: nowrap;">

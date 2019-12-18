@@ -166,10 +166,11 @@ def add_org(request):
         name = request.POST['name']
         abbrev = request.POST['acro']
         members = request.POST.getlist('members[]')
-
+        established = datetime.today().strftime('%Y-%m-%d')
         if name and abbrev:
             print(name)
             print(abbrev)
+            print(established)
             print(members)
             basicInfo = (
                 """
@@ -177,10 +178,11 @@ def add_org(request):
                 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
                 insert data {
                     <http://www.semwebtech.org/mondial/10/organizations/%s/>    rdf:type mon:Organization ;
-    			                                                                mon:name 'Triple A' ;
-        					                                                    mon:abbrev 'AAA'
+    			                                                                mon:name '%s' ;
+        					                                                    mon:abbrev '%s';
+        					                                                    mon:established '%s'
         		"""
-            % abbrev)
+            % (abbrev, name, abbrev, established))
             memberList = ""
             for member in members:
                 memberList += (" ;\nmon:hasMember <%s>" % member)

@@ -1,5 +1,6 @@
 import urllib
 
+from django.http import HttpRequest
 from django.shortcuts import render
 from datetime import datetime
 
@@ -46,9 +47,9 @@ def about(request):
 
 def element(request, selection):
     selection = urllib.parse.unquote(selection)
-    #print("selection = " + selection)
+    # print("selection = " + selection)
     elemType = selection.split("/")[-3]
-    #print(elemType)
+    # print(elemType)
 
     if elemType == 'mondial':
         query = (
@@ -108,8 +109,8 @@ def element(request, selection):
         return render(request, 'list.html', tparams)
 
     info = {}
-    val = ""
     for e in res['results']['bindings']:
+        val = ""
         attr = e['attribute']['value'].split("#", 1)[1]
         sub_attr = e['is']['value']
         if '#' in e['is']['value']:
@@ -125,10 +126,16 @@ def element(request, selection):
                     info.update({attr: {sub_attr: val}})
                 elif sub_attr not in info[attr]:
                     info[attr].update({sub_attr: val})
-                elif val not in info[attr][sub_attr]:
-                    info[attr][sub_attr] = [info[attr][sub_attr]] if isinstance(info[attr][sub_attr], (str, tuple))\
-                        else info[attr][sub_attr]
-                    info[attr][sub_attr].append(val)
+                elif isinstance(val, str):
+                    if val not in info[attr][sub_attr]:
+                        info[attr][sub_attr] = [info[attr][sub_attr]] if isinstance(info[attr][sub_attr],(str, tuple))\
+                            else info[attr][sub_attr]
+                        info[attr][sub_attr].append(val)
+                elif isinstance(val, tuple):
+                    if val[1] not in info[attr][sub_attr]:
+                        info[attr][sub_attr] = [info[attr][sub_attr]] if isinstance(info[attr][sub_attr], (str, tuple))\
+                            else info[attr][sub_attr]
+                        info[attr][sub_attr].append(val)
 
             else:
                 if 'general' not in info:
@@ -152,11 +159,63 @@ def element(request, selection):
     elif elemType == "organizations":
         return render(request, 'org.html', tparams)
 
-# generate new triples based on postal code and phone number
+
+def add_org(request):
+    assert isinstance(request, HttpRequest)
+    if 'name' in request.POST and 'acro' in request.POST and 'acro' in request.POST:
+        name = request.POST['name']
+        abbrev = request.POST['acro']
+        members = request.POST.getlist('members[]')
+
+        if name and abbrev:
+            print(name)
+            print(abbrev)
+            print(members)
+            basicInfo = (
+                """
+                prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+                prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                insert data {
+                    <http://www.semwebtech.org/mondial/10/organizations/%s/>    rdf:type mon:Organization ;
+    			                                                                mon:name 'Triple A' ;
+        					                                                    mon:abbrev 'AAA'
+        		"""
+            % abbrev)
+            memberList = ""
+            for member in members:
+                memberList += (" ;\nmon:hasMember <%s>" % member)
+
+            update = basicInfo + memberList + '}'
+            print(update)
+            payload_query = {"update": update}
+            accessor.sparql_update(body=payload_query, repo_name=repo_name)
+            return element(request, 'http://www.semwebtech.org/mondial/10/meta#Organization')
+
+    query = (
+        """
+        prefix mon: <http://www.semwebtech.org/mondial/10/meta#>
+        prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?name ?item
+        where {
+            ?item rdf:type mon:Country .
+            ?item mon:name ?name
+        }
+        """
+    )
+    payload_query = {"query": query}
+    res = accessor.sparql_select(body=payload_query,
+                                 repo_name=repo_name)
+    res = json.loads(res)
+
+    tparams = {
+        'year': datetime.now().year,
+        'countries': res['results']['bindings'],
+    }
+
+    return render(request, 'add_org.html', tparams)
 
 
 def apply_inference():
-
     # dictionary for the rule
     rule = rules.code_country
 
@@ -173,7 +232,7 @@ def apply_inference():
     for r in result:
         value = r['v']['value']
         for pc in rule.keys():
-            #incerto aqui neste if se está a fazer correctamente
+            # incerto aqui neste if se está a fazer correctamente
             if int(value.split("-")[0]) >= pc[0] and int(value.split("-")[0]) <= pc[1]:
                 region = rule[pc]
                 # country code and the local name

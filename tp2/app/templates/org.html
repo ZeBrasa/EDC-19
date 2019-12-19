@@ -40,7 +40,7 @@
                         </td>
                     {% else %}
                         <td style="white-space: nowrap;">
-                            {{ info.hasHeadq.name }}
+                            <a class="url" href="http://maps.google.com?q={{info.hasHeadq.latitude}},{{info.hasHeadq.longitude}}">{{ info.hasHeadq.name }}</a>
                         </td>
                     {% endif %}
                     </tr>

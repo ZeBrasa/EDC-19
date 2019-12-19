@@ -17,22 +17,36 @@ select distinct ?attribute ?is ?what ?name
 where
 {	
     {
- 		<http://www.semwebtech.org/mondial/10/countries/D/> ?attribute ?is .
+ 		<http://www.semwebtech.org/mondial/10/countries/P/> ?attribute ?is .
 		optional { ?is mon:name ?what }
     }
     union
 	{
      	?who ?is ?what .
-       	<http://www.semwebtech.org/mondial/10/countries/D/> mon:languageInfo ?who .
+       	<http://www.semwebtech.org/mondial/10/countries/P/> mon:languageInfo ?who .
        	?who rdf:type ?attribute .
       	optional { ?what mon:name ?name }
     }
    	union
     {
         ?who ?is ?what .
-       	<http://www.semwebtech.org/mondial/10/countries/D/> mon:religionInfo ?who .
+       	<http://www.semwebtech.org/mondial/10/countries/P/> mon:religionInfo ?who .
        	?who rdf:type ?attribute .
       	optional { ?what mon:name ?name }
+    }
+     union
+    {
+        ?who ?is ?what .
+        <http://www.semwebtech.org/mondial/10/countries/P/> mon:wasDependentOf ?who .
+        ?who rdf:type ?attribute .
+        optional { ?what mon:name ?name }
+    }
+    union
+    {
+        ?who ?is ?what .
+        <http://www.semwebtech.org/mondial/10/countries/P/> mon:dependentOf ?who .
+        ?who rdf:type ?attribute .
+        optional { ?what mon:name ?name }
     }
 }
         """
@@ -83,5 +97,5 @@ for e in res['results']['bindings']:
 
 with open("dict.json", 'w') as f:
     f.write(json.dumps(info, indent=2))
-#print(json.dumps(info, indent=2))
-print(info['SpokenBy']['onLanguage'][1])
+print(json.dumps(info, indent=2))
+print(info['wasDependentOf'][1])

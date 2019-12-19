@@ -12,27 +12,43 @@
                             {{ info.general.name }}
                             <br />
                             <div style="padding-top: 0.25em; font-weight: normal;">
-                                {{ info.general.localname }}
+                                {{ info.cityIn.items.name }}
                             </div>
                         </th>
                     </tr>
                     <tr>
-                        <th scope="row"> Country</th>
-                        <td style="white-space: nowrap;">
+                        {% if info.cityIn.items|length == 2 %}
+                            <th scope="row"> Country and |Province| </th>
+                            <td style="white-space: nowrap;">
                             {% for key, val in info.cityIn.items %}
-                                <a class="url" href="/{{ key|urlencode }}">{{ val }}</a>
+                                 <a class="url" href="/{{ key|urlencode }}">{{ val }} |</a>
                             {% endfor %}
+                            {% else %}
+                            <th scope="row"> Country</th>
+                                <td style="white-space: nowrap;">
+                            {% for key, val in info.cityIn.items %}
+
+
+                                    <a class="url" href="/{{ key|urlencode }}">{{ val }}</a>
+                            {% endfor %}
+                            {% endif %}
+
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">Coordinates</th>
                         <td style="white-space: nowrap;">
                             <span>{{ info.general.latitude }}, {{ info.general.longitude }}</span>
+                            <a class="url" href="http://maps.google.com?q={{info.general.latitude}},{{info.general.longitude}}"><img border="0" alt="W3Schools" src="/static/images/gmaps.png" width="20" height="20"></a>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row"> Elevation</th>
+                        {% if info.general.elevation == null %}
+                            <td>No Data found</td>
+                        {% else %}
                         <td>{{ info.general.elevation }} meters</td>
+                        {% endif %}
                     </tr>
                     <tr class="mergedtoprow" style="height: 18px;">
                         <th style="text-align: left; height: 18px; width: 438px;" colspan="2"> Population</th>

@@ -1,242 +1,160 @@
 {
   "general": {
     "type": "Country",
-    "name": "Germany",
-    "localname": "Bundesrepublik Deutschland (die)",
-    "carCode": "D",
-    "area": "356910",
-    "population": "82521653",
-    "hadPopulation": "node107",
-    "populationGrowth": "-0.18",
-    "infantMortality": "3.46",
-    "gdpTotal": "3593000",
-    "gdpInd": "30.1",
-    "gdpServ": "69",
-    "gdpAgri": "0.8",
-    "inflation": "1.6",
-    "unemployment": "5.3",
-    "government": "federal republic",
-    "independenceDate": "1871-01-18",
-    "hasBorder": "node17263",
-    "encompassedByInfo": "node17005",
-    "isInMembership": "node17624",
-    "languageInfo": "node27688",
-    "ethnicInfo": "node28551",
-    "religionInfo": "node27978"
+    "population": "10561614",
+    "name": "Portugal",
+    "hadPopulation": "node3080",
+    "area": "92080",
+    "localname": "Rep\u00fablica Portuguesa (a)",
+    "independenceDate": "1139-07-25",
+    "populationGrowth": "0.12",
+    "gdpAgri": "2.6",
+    "gdpInd": "22.2",
+    "government": "republic; parliamentary democracy",
+    "gdpTotal": "219300",
+    "infantMortality": "4.48",
+    "inflation": "0.4",
+    "carCode": "P",
+    "gdpServ": "75.2",
+    "unemployment": "16.8",
+    "hasBorder": "node29084",
+    "encompassedByInfo": "node17043",
+    "isInMembership": "node17196",
+    "languageInfo": "node17213",
+    "religionInfo": "node24805"
   },
   "capital": {
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Berlin/cities/Berlin/": "Berlin"
-  },
-  "hasProvince": {
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Baden-W\u00fcrttemberg/": "Baden-W\u00fcrttemberg",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Bayern/": "Bayern",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Berlin/": "Berlin",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Brandenburg/": "Brandenburg",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Bremen/": "Bremen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Hamburg/": "Hamburg",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Hessen/": "Hessen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Mecklenburg-Vorpommern/": "Mecklenburg-Vorpommern",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Niedersachsen/": "Niedersachsen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/": "Nordrhein-Westfalen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Rheinland-Pfalz/": "Rheinland-Pfalz",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Saarland/": "Saarland",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Sachsen/": "Sachsen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Sachsen-Anhalt/": "Sachsen-Anhalt",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Schleswig-Holstein/": "Schleswig-Holstein",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Th\u00fcringen/": "Th\u00fcringen"
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Lisboa/cities/Lisboa/": "Lisboa"
   },
   "hasCity": {
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Berlin/cities/Berlin/": "Berlin",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Baden-W\u00fcrttemberg/cities/Stuttgart/": "Stuttgart",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Bayern/cities/M\u00fcnchen/": "M\u00fcnchen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Brandenburg/cities/Potsdam/": "Potsdam",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Bremen/cities/Bremen/": "Bremen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Hamburg/cities/Hamburg/": "Hamburg",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Hessen/cities/Wiesbaden/": "Wiesbaden",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Mecklenburg-Vorpommern/cities/Schwerin/": "Schwerin",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Niedersachsen/cities/Hannover/": "Hannover",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/D\u00fcsseldorf/": "D\u00fcsseldorf",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Rheinland-Pfalz/cities/Mainz/": "Mainz",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Saarland/cities/Saarbr\u00fccken/": "Saarbr\u00fccken",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Sachsen/cities/Dresden/": "Dresden",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Sachsen-Anhalt/cities/Magdeburg/": "Magdeburg",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Schleswig-Holstein/cities/Kiel/": "Kiel",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Th\u00fcringen/cities/Erfurt/": "Erfurt",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Baden-W\u00fcrttemberg/cities/Mannheim/": "Mannheim",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Baden-W\u00fcrttemberg/cities/Karlsruhe/": "Karlsruhe",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Baden-W\u00fcrttemberg/cities/Freiburg/": "Freiburg",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Baden-W\u00fcrttemberg/cities/Heidelberg/": "Heidelberg",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Baden-W\u00fcrttemberg/cities/Heilbronn/": "Heilbronn",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Baden-W\u00fcrttemberg/cities/Pforzheim/": "Pforzheim",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Baden-W\u00fcrttemberg/cities/Ulm/": "Ulm",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Baden-W\u00fcrttemberg/cities/Reutlingen/": "Reutlingen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Bayern/cities/N\u00fcrnberg/": "N\u00fcrnberg",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Bayern/cities/Augsburg/": "Augsburg",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Bayern/cities/W\u00fcrzburg/": "W\u00fcrzburg",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Bayern/cities/Regensburg/": "Regensburg",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Bayern/cities/Ingolstadt/": "Ingolstadt",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Bayern/cities/F\u00fcrth/": "F\u00fcrth",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Bayern/cities/Erlangen/": "Erlangen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Brandenburg/cities/Cottbus/": "Cottbus",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Bremen/cities/Bremerhaven/": "Bremerhaven",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Hessen/cities/Frankfurt+am+Main/": "Frankfurt am Main",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Hessen/cities/Kassel/": "Kassel",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Hessen/cities/Darmstadt/": "Darmstadt",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Hessen/cities/Offenbach+am+Main/": "Offenbach am Main",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Mecklenburg-Vorpommern/cities/Rostock/": "Rostock",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Niedersachsen/cities/Braunschweig/": "Braunschweig",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Niedersachsen/cities/Osnabr\u00fcck/": "Osnabr\u00fcck",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Niedersachsen/cities/Oldenburg/": "Oldenburg",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Niedersachsen/cities/G\u00f6ttingen/": "G\u00f6ttingen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Niedersachsen/cities/Wolfsburg/": "Wolfsburg",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Niedersachsen/cities/Salzgitter/": "Salzgitter",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Niedersachsen/cities/Hildesheim/": "Hildesheim",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/K\u00f6ln/": "K\u00f6ln",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Essen/": "Essen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Dortmund/": "Dortmund",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Duisburg/": "Duisburg",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Bochum/": "Bochum",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Wuppertal/": "Wuppertal",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Bielefeld/": "Bielefeld",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Gelsenkirchen/": "Gelsenkirchen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Bonn/": "Bonn",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/M\u00f6nchengladbach/": "M\u00f6nchengladbach",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/M\u00fcnster/": "M\u00fcnster",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Krefeld/": "Krefeld",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Aachen/": "Aachen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Oberhausen/": "Oberhausen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Hagen/": "Hagen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Hamm/": "Hamm",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Herne/": "Herne",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/M\u00fclheim/": "M\u00fclheim",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Solingen/": "Solingen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Leverkusen/": "Leverkusen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Neuss/": "Neuss",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Paderborn/": "Paderborn",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Recklinghausen/": "Recklinghausen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Remscheid/": "Remscheid",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Bottrop/": "Bottrop",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Siegen/": "Siegen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Moers/": "Moers",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Witten/": "Witten",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Nordrhein-Westfalen/cities/Bergisch+Gladbach/": "Bergisch Gladbach",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Rheinland-Pfalz/cities/Ludwigshafen/": "Ludwigshafen",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Rheinland-Pfalz/cities/Koblenz/": "Koblenz",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Rheinland-Pfalz/cities/Kaiserslautern/": "Kaiserslautern",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Rheinland-Pfalz/cities/Trier/": "Trier",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Sachsen/cities/Leipzig/": "Leipzig",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Sachsen/cities/Chemnitz/": "Chemnitz",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Sachsen/cities/Zwickau/": "Zwickau",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Sachsen-Anhalt/cities/Halle/": "Halle",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Schleswig-Holstein/cities/L\u00fcbeck/": "L\u00fcbeck",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Th\u00fcringen/cities/Gera/": "Gera",
-    "http://www.semwebtech.org/mondial/10/countries/D/provinces/Th\u00fcringen/cities/Jena/": "Jena"
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Vila+Real/cities/Vila+Real/": "Vila Real",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Aveiro/cities/Aveiro/": "Aveiro",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Guarda/cities/Guarda/": "Guarda",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Porto/cities/Vila+Nova+de+Gaia/": "Vila Nova de Gaia",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Porto/cities/Oporto/": "Oporto",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Braga/cities/Braga/": "Braga",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Lisboa/cities/Barreiro/": "Barreiro",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Lisboa/cities/Lisboa/": "Lisboa",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Lisboa/cities/Amadora/": "Amadora",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Lisboa/cities/Almada/": "Almada",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Portalegre/cities/Portalegre/": "Portalegre",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Castelo+Branco/cities/Castelo+Branco/": "Castelo Branco",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Santarem/cities/Santarem/": "Santarem",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Algarve/cities/Faro/": "Faro",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Beja/cities/Beja/": "Beja",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Evora/cities/Evora/": "Evora",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Coimbra/cities/Coimbra/": "Coimbra",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Viseu/cities/Viseu/": "Viseu",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Madeira/cities/Funchal/": "Funchal",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Azores/cities/Ponta+Delgada/": "Ponta Delgada",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Setubal/cities/Set\u00fabal/": "Set\u00fabal",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Braganca/cities/Braganca/": "Braganca",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Viana+do+Castelo/cities/Viana+do+Castelo/": "Viana do Castelo",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Leiria/cities/Leiria/": "Leiria"
+  },
+  "isMember": {
+    "http://www.semwebtech.org/mondial/10/organizations/WIPO/": "World Intellectual Property Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/UNHCR/": "United Nations High Commissioner for Refugees",
+    "http://www.semwebtech.org/mondial/10/organizations/Interpol/": "International Criminal Police Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/ILO/": "International Labor Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/IBRD/": "International Bank for Reconstruction and Development",
+    "http://www.semwebtech.org/mondial/10/organizations/AfDB/": "African Development Bank Group",
+    "http://www.semwebtech.org/mondial/10/organizations/CD/": "Community of Democracies",
+    "http://www.semwebtech.org/mondial/10/organizations/OECD/": "Organization for Economic Cooperation and Development",
+    "http://www.semwebtech.org/mondial/10/organizations/IFAD/": "International Fund for Agricultural Development",
+    "http://www.semwebtech.org/mondial/10/organizations/WMO/": "World Meteorological Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/IOM/": "International Organization for Migration",
+    "http://www.semwebtech.org/mondial/10/organizations/IOC/": "International Olympic Committee",
+    "http://www.semwebtech.org/mondial/10/organizations/UN/": "United Nations",
+    "http://www.semwebtech.org/mondial/10/organizations/AG/": "Australia Group",
+    "http://www.semwebtech.org/mondial/10/organizations/ICC/": "International Chamber of Commerce",
+    "http://www.semwebtech.org/mondial/10/organizations/FAO/": "Food and Agriculture Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/IFC/": "International Finance Corporation",
+    "http://www.semwebtech.org/mondial/10/organizations/WTO/": "World Trade Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/ZC/": "Zangger Committee",
+    "http://www.semwebtech.org/mondial/10/organizations/IHO/": "International Hydrographic Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/IMO/": "International Maritime Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/WFTU/": "World Federation of Trade Unions",
+    "http://www.semwebtech.org/mondial/10/organizations/ITUC/": "International Trade Union Confederation",
+    "http://www.semwebtech.org/mondial/10/organizations/NEA/": "Nuclear Energy Agency",
+    "http://www.semwebtech.org/mondial/10/organizations/SELEC/": "Convention of the Southeast European Law Enforcement Center",
+    "http://www.semwebtech.org/mondial/10/organizations/UNCTAD/": "United Nations Conference on Trade and Development",
+    "http://www.semwebtech.org/mondial/10/organizations/ICJ/": "International Court of Justice",
+    "http://www.semwebtech.org/mondial/10/organizations/WCO/": "World Customs Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/NATO/": "North Atlantic Treaty Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/IFRCS/": "International Federation of Red Cross and Red Crescent Societies",
+    "http://www.semwebtech.org/mondial/10/organizations/ITU/": "International Telecommunication Union",
+    "http://www.semwebtech.org/mondial/10/organizations/NSG/": "Nuclear Suppliers Group",
+    "http://www.semwebtech.org/mondial/10/organizations/OPCW/": "Organization for the Prohibition of Chemical Weapons",
+    "http://www.semwebtech.org/mondial/10/organizations/IEA/": "International Energy Agency",
+    "http://www.semwebtech.org/mondial/10/organizations/IAEA/": "International Atomic Energy Agency",
+    "http://www.semwebtech.org/mondial/10/organizations/EMU/": "Economic and Monetary Union",
+    "http://www.semwebtech.org/mondial/10/organizations/ICAO/": "International Civil Aviation Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/MIGA/": "Multilateral Investment Guarantee Agency",
+    "http://www.semwebtech.org/mondial/10/organizations/UPU/": "Universal Postal Union",
+    "http://www.semwebtech.org/mondial/10/organizations/IPU/": "Inter-Parliamentary Union",
+    "http://www.semwebtech.org/mondial/10/organizations/IMF/": "International Monetary Fund",
+    "http://www.semwebtech.org/mondial/10/organizations/ICCt/": "International Criminal Court",
+    "http://www.semwebtech.org/mondial/10/organizations/OAS/": "Organization of American States",
+    "http://www.semwebtech.org/mondial/10/organizations/ISO/": "International Organization for Standardization",
+    "http://www.semwebtech.org/mondial/10/organizations/ITSO/": "International Telecommunication Satellite Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/ADB/": "Asian Development Bank",
+    "http://www.semwebtech.org/mondial/10/organizations/UNMIT/": "United Nations Integrated Mission in Timor-Leste",
+    "http://www.semwebtech.org/mondial/10/organizations/IADB/": "Inter-American Development Bank",
+    "http://www.semwebtech.org/mondial/10/organizations/UNWTO/": "World Tourism Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/IMSO/": "International Mobile Satellite Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/WHO/": "World Health Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/UNIDO/": "United Nations Industrial Development Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/IDA/": "International Development Association",
+    "http://www.semwebtech.org/mondial/10/organizations/PCA/": "Permanent Court of Arbitration",
+    "http://www.semwebtech.org/mondial/10/organizations/UNESCO/": "United Nations Educational, Scientific, and Cultural Organization",
+    "http://www.semwebtech.org/mondial/10/organizations/BIS/": "Bank for International Settlements",
+    "http://www.semwebtech.org/mondial/10/organizations/EBRD/": "European Bank for Reconstruction and Development",
+    "http://www.semwebtech.org/mondial/10/organizations/CPLP/": "Comuinidade dos Paises de Lingua Portuguesa",
+    "http://www.semwebtech.org/mondial/10/organizations/ESA/": "European Space Agency",
+    "http://www.semwebtech.org/mondial/10/organizations/OSCE/": "Organization for Security and Cooperation in Europe",
+    "http://www.semwebtech.org/mondial/10/organizations/EAPC/": "Euro-Atlantic Partnership Council",
+    "http://www.semwebtech.org/mondial/10/organizations/CERN/": "European Organization for Nuclear Research",
+    "http://www.semwebtech.org/mondial/10/organizations/FATF/": "Financial Action Task Force",
+    "http://www.semwebtech.org/mondial/10/organizations/EIB/": "European Investment Bank",
+    "http://www.semwebtech.org/mondial/10/organizations/ECB/": "European Central Bank",
+    "http://www.semwebtech.org/mondial/10/organizations/CE/": "Council of Europe",
+    "http://www.semwebtech.org/mondial/10/organizations/EU/": "European Union",
+    "http://www.semwebtech.org/mondial/10/organizations/LAIA/": "Latin American Integration Association"
+  },
+  "hasProvince": {
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Vila+Real/": "Vila Real",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Aveiro/": "Aveiro",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Guarda/": "Guarda",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Porto/": "Porto",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Braga/": "Braga",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Lisboa/": "Lisboa",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Portalegre/": "Portalegre",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Castelo+Branco/": "Castelo Branco",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Santarem/": "Santarem",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Algarve/": "Algarve",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Beja/": "Beja",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Evora/": "Evora",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Coimbra/": "Coimbra",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Viseu/": "Viseu",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Madeira/": "Madeira",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Azores/": "Azores",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Setubal/": "Setubal",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Braganca/": "Braganca",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Viana+do+Castelo/": "Viana do Castelo",
+    "http://www.semwebtech.org/mondial/10/countries/P/provinces/Leiria/": "Leiria"
+  },
+  "neighbor": {
+    "http://www.semwebtech.org/mondial/10/countries/E/": "Spain"
+  },
+  "wasDependentOf": {
+    "http://www.semwebtech.org/mondial/10/countries/E/": "Spain"
   },
   "encompassed": {
     "http://www.semwebtech.org/mondial/10/continents/Europe/": "Europe"
   },
-  "neighbor": {
-    "http://www.semwebtech.org/mondial/10/countries/F/": "France",
-    "http://www.semwebtech.org/mondial/10/countries/A/": "Austria",
-    "http://www.semwebtech.org/mondial/10/countries/CZ/": "Czech Republic",
-    "http://www.semwebtech.org/mondial/10/countries/CH/": "Switzerland",
-    "http://www.semwebtech.org/mondial/10/countries/PL/": "Poland",
-    "http://www.semwebtech.org/mondial/10/countries/B/": "Belgium",
-    "http://www.semwebtech.org/mondial/10/countries/NL/": "Netherlands",
-    "http://www.semwebtech.org/mondial/10/countries/L/": "Luxembourg",
-    "http://www.semwebtech.org/mondial/10/countries/DK/": "Denmark"
-  },
-  "isMember": {
-    "http://www.semwebtech.org/mondial/10/organizations/UN/": "United Nations",
-    "http://www.semwebtech.org/mondial/10/organizations/AfDB/": "African Development Bank Group",
-    "http://www.semwebtech.org/mondial/10/organizations/UNAMID/": "African Union/United Nations Hybrid Operation in Darfur",
-    "http://www.semwebtech.org/mondial/10/organizations/ADB/": "Asian Development Bank",
-    "http://www.semwebtech.org/mondial/10/organizations/AG/": "Australia Group",
-    "http://www.semwebtech.org/mondial/10/organizations/BIS/": "Bank for International Settlements",
-    "http://www.semwebtech.org/mondial/10/organizations/BSEC/": "Black Sea Economic Cooperation Zone",
-    "http://www.semwebtech.org/mondial/10/organizations/CDB/": "Caribbean Development Bank",
-    "http://www.semwebtech.org/mondial/10/organizations/SICA/": "Central American Integration System",
-    "http://www.semwebtech.org/mondial/10/organizations/CD/": "Community of Democracies",
-    "http://www.semwebtech.org/mondial/10/organizations/SELEC/": "Convention of the Southeast European Law Enforcement Center",
-    "http://www.semwebtech.org/mondial/10/organizations/CE/": "Council of Europe",
-    "http://www.semwebtech.org/mondial/10/organizations/CBSS/": "Council of the Baltic Sea States",
-    "http://www.semwebtech.org/mondial/10/organizations/EMU/": "Economic and Monetary Union",
-    "http://www.semwebtech.org/mondial/10/organizations/EAPC/": "Euro-Atlantic Partnership Council",
-    "http://www.semwebtech.org/mondial/10/organizations/EBRD/": "European Bank for Reconstruction and Development",
-    "http://www.semwebtech.org/mondial/10/organizations/ECB/": "European Central Bank",
-    "http://www.semwebtech.org/mondial/10/organizations/EIB/": "European Investment Bank",
-    "http://www.semwebtech.org/mondial/10/organizations/CERN/": "European Organization for Nuclear Research",
-    "http://www.semwebtech.org/mondial/10/organizations/ESA/": "European Space Agency",
-    "http://www.semwebtech.org/mondial/10/organizations/EU/": "European Union",
-    "http://www.semwebtech.org/mondial/10/organizations/EITI/": "Extractive Industry Transparency Initiative",
-    "http://www.semwebtech.org/mondial/10/organizations/FATF/": "Financial Action Task Force",
-    "http://www.semwebtech.org/mondial/10/organizations/FAO/": "Food and Agriculture Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/G-10/": "Group of 10",
-    "http://www.semwebtech.org/mondial/10/organizations/G-20/": "Group of 20",
-    "http://www.semwebtech.org/mondial/10/organizations/G-5/": "Group of 5",
-    "http://www.semwebtech.org/mondial/10/organizations/G-7/": "Group of 7",
-    "http://www.semwebtech.org/mondial/10/organizations/G-8/": "Group of 8",
-    "http://www.semwebtech.org/mondial/10/organizations/IADB/": "Inter-American Development Bank",
-    "http://www.semwebtech.org/mondial/10/organizations/IGAD/": "Inter-Governmental Authority on Development",
-    "http://www.semwebtech.org/mondial/10/organizations/IPU/": "Inter-Parliamentary Union",
-    "http://www.semwebtech.org/mondial/10/organizations/IAEA/": "International Atomic Energy Agency",
-    "http://www.semwebtech.org/mondial/10/organizations/IBRD/": "International Bank for Reconstruction and Development",
-    "http://www.semwebtech.org/mondial/10/organizations/ICC/": "International Chamber of Commerce",
-    "http://www.semwebtech.org/mondial/10/organizations/ICAO/": "International Civil Aviation Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/ICJ/": "International Court of Justice",
-    "http://www.semwebtech.org/mondial/10/organizations/ICCt/": "International Criminal Court",
-    "http://www.semwebtech.org/mondial/10/organizations/Interpol/": "International Criminal Police Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/IDA/": "International Development Association",
-    "http://www.semwebtech.org/mondial/10/organizations/IEA/": "International Energy Agency",
-    "http://www.semwebtech.org/mondial/10/organizations/IFRCS/": "International Federation of Red Cross and Red Crescent Societies",
-    "http://www.semwebtech.org/mondial/10/organizations/IFC/": "International Finance Corporation",
-    "http://www.semwebtech.org/mondial/10/organizations/IFAD/": "International Fund for Agricultural Development",
-    "http://www.semwebtech.org/mondial/10/organizations/IHO/": "International Hydrographic Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/ILO/": "International Labor Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/IMO/": "International Maritime Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/IMSO/": "International Mobile Satellite Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/IMF/": "International Monetary Fund",
-    "http://www.semwebtech.org/mondial/10/organizations/IOC/": "International Olympic Committee",
-    "http://www.semwebtech.org/mondial/10/organizations/IOM/": "International Organization for Migration",
-    "http://www.semwebtech.org/mondial/10/organizations/ISO/": "International Organization for Standardization",
-    "http://www.semwebtech.org/mondial/10/organizations/ITSO/": "International Telecommunication Satellite Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/ITU/": "International Telecommunication Union",
-    "http://www.semwebtech.org/mondial/10/organizations/ITUC/": "International Trade Union Confederation",
-    "http://www.semwebtech.org/mondial/10/organizations/MIGA/": "Multilateral Investment Guarantee Agency",
-    "http://www.semwebtech.org/mondial/10/organizations/NATO/": "North Atlantic Treaty Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/NEA/": "Nuclear Energy Agency",
-    "http://www.semwebtech.org/mondial/10/organizations/NSG/": "Nuclear Suppliers Group",
-    "http://www.semwebtech.org/mondial/10/organizations/OECD/": "Organization for Economic Cooperation and Development",
-    "http://www.semwebtech.org/mondial/10/organizations/OSCE/": "Organization for Security and Cooperation in Europe",
-    "http://www.semwebtech.org/mondial/10/organizations/OPCW/": "Organization for the Prohibition of Chemical Weapons",
-    "http://www.semwebtech.org/mondial/10/organizations/OAS/": "Organization of American States",
-    "http://www.semwebtech.org/mondial/10/organizations/PCA/": "Permanent Court of Arbitration",
-    "http://www.semwebtech.org/mondial/10/organizations/UNCTAD/": "United Nations Conference on Trade and Development",
-    "http://www.semwebtech.org/mondial/10/organizations/UNESCO/": "United Nations Educational, Scientific, and Cultural Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/UNHCR/": "United Nations High Commissioner for Refugees",
-    "http://www.semwebtech.org/mondial/10/organizations/UNIDO/": "United Nations Industrial Development Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/UNIFIL/": "United Nations Interim Force in Lebanon",
-    "http://www.semwebtech.org/mondial/10/organizations/UNMISS/": "United Nations Mission in the Republic of South Sudan",
-    "http://www.semwebtech.org/mondial/10/organizations/UNRWA/": "United Nations Relief and Works Agency for Palestine Refugees in the Near East",
-    "http://www.semwebtech.org/mondial/10/organizations/UPU/": "Universal Postal Union",
-    "http://www.semwebtech.org/mondial/10/organizations/WCO/": "World Customs Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/WHO/": "World Health Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/WIPO/": "World Intellectual Property Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/WMO/": "World Meteorological Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/UNWTO/": "World Tourism Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/WTO/": "World Trade Organization",
-    "http://www.semwebtech.org/mondial/10/organizations/ZC/": "Zangger Committee"
-  },
   "borders": {
-    "http://www.semwebtech.org/mondial/10/countries/F/": "France",
-    "http://www.semwebtech.org/mondial/10/countries/A/": "Austria",
-    "http://www.semwebtech.org/mondial/10/countries/CZ/": "Czech Republic",
-    "http://www.semwebtech.org/mondial/10/countries/CH/": "Switzerland",
-    "http://www.semwebtech.org/mondial/10/countries/PL/": "Poland",
-    "http://www.semwebtech.org/mondial/10/countries/B/": "Belgium",
-    "http://www.semwebtech.org/mondial/10/countries/NL/": "Netherlands",
-    "http://www.semwebtech.org/mondial/10/countries/L/": "Luxembourg",
-    "http://www.semwebtech.org/mondial/10/countries/DK/": "Denmark"
+    "http://www.semwebtech.org/mondial/10/countries/E/": "Spain"
   },
   "SpokenBy": {
     "type": [
@@ -244,13 +162,13 @@
       "http://www.semwebtech.org/mondial/10/meta#AnthropoGeographicalRelationship"
     ],
     "percent": "100",
-    "onLanguage": [
-      "http://www.semwebtech.org/mondial/10/languages/German/",
-      "German"
-    ],
     "languageInfo-": [
-      "http://www.semwebtech.org/mondial/10/countries/D/",
-      "Germany"
+      "http://www.semwebtech.org/mondial/10/countries/P/",
+      "Portugal"
+    ],
+    "onLanguage": [
+      "http://www.semwebtech.org/mondial/10/languages/Portuguese/",
+      "Portuguese"
     ]
   },
   "AnthropoGeographicalRelationship": {
@@ -261,18 +179,20 @@
     ],
     "percent": [
       "100",
-      "28.9",
-      "27.1",
-      "5.5",
-      "0.3"
-    ],
-    "onLanguage": [
-      "http://www.semwebtech.org/mondial/10/languages/German/",
-      "German"
+      "84.5",
+      "1"
     ],
     "languageInfo-": [
-      "http://www.semwebtech.org/mondial/10/countries/D/",
-      "Germany"
+      "http://www.semwebtech.org/mondial/10/countries/P/",
+      "Portugal"
+    ],
+    "onLanguage": [
+      "http://www.semwebtech.org/mondial/10/languages/Portuguese/",
+      "Portuguese"
+    ],
+    "religionInfo-": [
+      "http://www.semwebtech.org/mondial/10/countries/P/",
+      "Portugal"
     ],
     "onReligion": [
       [
@@ -282,19 +202,7 @@
       [
         "http://www.semwebtech.org/mondial/10/religions/Protestant/",
         "Protestant"
-      ],
-      [
-        "http://www.semwebtech.org/mondial/10/religions/Muslim/",
-        "Muslim"
-      ],
-      [
-        "http://www.semwebtech.org/mondial/10/religions/Buddhist/",
-        "Buddhist"
       ]
-    ],
-    "religionInfo-": [
-      "http://www.semwebtech.org/mondial/10/countries/D/",
-      "Germany"
     ]
   },
   "BelievedBy": {
@@ -303,10 +211,12 @@
       "http://www.semwebtech.org/mondial/10/meta#AnthropoGeographicalRelationship"
     ],
     "percent": [
-      "28.9",
-      "27.1",
-      "5.5",
-      "0.3"
+      "84.5",
+      "1"
+    ],
+    "religionInfo-": [
+      "http://www.semwebtech.org/mondial/10/countries/P/",
+      "Portugal"
     ],
     "onReligion": [
       [
@@ -316,19 +226,2995 @@
       [
         "http://www.semwebtech.org/mondial/10/religions/Protestant/",
         "Protestant"
+      ]
+    ]
+  },
+  "Country": {
+    "type": [
+      "http://www.semwebtech.org/mondial/10/meta#Country",
+      "http://www.semwebtech.org/mondial/10/meta#LargeArea",
+      "http://www.semwebtech.org/mondial/10/meta#Area"
+    ],
+    "population": "46815916",
+    "name": "Spain",
+    "hadPopulation": [
+      "node2987",
+      "node2988",
+      "node3042",
+      "node3500",
+      "node3517",
+      "node3518",
+      "node3519",
+      "node3520",
+      "node3541",
+      "node3542",
+      "node3543",
+      "node3583",
+      "node32125",
+      "node32126",
+      "node32180",
+      "node32638",
+      "node32655",
+      "node32656",
+      "node32657",
+      "node32658",
+      "node32679",
+      "node32680",
+      "node32681",
+      "node32721",
+      "node58351",
+      "node58352",
+      "node58353",
+      "node58354",
+      "node58355",
+      "node58356",
+      "node58357",
+      "node58358",
+      "node58359",
+      "node58360",
+      "node58361",
+      "node58362"
+    ],
+    "capital": [
+      "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Madrid/",
+      "Madrid"
+    ],
+    "hasCity": [
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Madrid/",
+        "Madrid"
       ],
       [
-        "http://www.semwebtech.org/mondial/10/religions/Muslim/",
-        "Muslim"
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Lleida/",
+        "Lleida"
       ],
       [
-        "http://www.semwebtech.org/mondial/10/religions/Buddhist/",
-        "Buddhist"
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Jerez+de+la+Frontera/",
+        "Jerez de la Frontera"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Almer\u00eda/",
+        "Almer\u00eda"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Sevilla/",
+        "Sevilla"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Algeciras/",
+        "Algeciras"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Marbella/",
+        "Marbella"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Dos+Hermanas/",
+        "Dos Hermanas"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Ja\u00e9n/",
+        "Ja\u00e9n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/C\u00e1diz/",
+        "C\u00e1diz"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Granada/",
+        "Granada"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/C\u00f3rdoba/",
+        "C\u00f3rdoba"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Huelva/",
+        "Huelva"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/M\u00e1laga/",
+        "M\u00e1laga"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Alcal\u00e1+de+Henares/",
+        "Alcal\u00e1 de Henares"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/cities/Valladolid/",
+        "Valladolid"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/cities/Salamanca/",
+        "Salamanca"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/cities/Le\u00f3n/",
+        "Le\u00f3n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/cities/Burgos/",
+        "Burgos"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla-La+Mancha/cities/Toledo/",
+        "Toledo"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla-La+Mancha/cities/Albacete/",
+        "Albacete"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Extremadura/cities/Badajoz/",
+        "Badajoz"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Extremadura/cities/Merida/",
+        "Merida"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Fuenlabrada/",
+        "Fuenlabrada"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/M\u00f3stoles/",
+        "M\u00f3stoles"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/cities/Castell\u00f3n+de+la+Plana/",
+        "Castell\u00f3n de la Plana"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Arag\u00f3n/cities/Zaragoza/",
+        "Zaragoza"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/La+Rioja/cities/Logro\u00f1o/",
+        "Logro\u00f1o"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Navarra/cities/Pamplona/",
+        "Pamplona"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Hospitalet+de+Llobregat/",
+        "Hospitalet de Llobregat"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Sabadell/",
+        "Sabadell"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Matar\u00f3/",
+        "Matar\u00f3"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Reus/",
+        "Reus"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Barcelona/",
+        "Barcelona"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Tarragona/",
+        "Tarragona"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Badalona/",
+        "Badalona"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Santa+Coloma+de+Gramenet/",
+        "Santa Coloma de Gramenet"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Terrassa/",
+        "Terrassa"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/cities/Bilbao/",
+        "Bilbao"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/cities/Vitoria-Gasteiz/",
+        "Vitoria-Gasteiz"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/cities/Donostia/",
+        "Donostia"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/cities/Barakaldo/",
+        "Barakaldo"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/cities/A+Coru\u00f1a/",
+        "A Coru\u00f1a"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/cities/Las+Palmas+de+Gran+Canaria/",
+        "Las Palmas de Gran Canaria"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/cities/Telde/",
+        "Telde"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/cities/Santa+Cruz+de+Tenerife/",
+        "Santa Cruz de Tenerife"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/cities/San+Crist\u00f3bal+de+La+Laguna/",
+        "San Crist\u00f3bal de La Laguna"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Alcobendas/",
+        "Alcobendas"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/cities/Ourense/",
+        "Ourense"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Legan\u00e9s/",
+        "Legan\u00e9s"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Getafe/",
+        "Getafe"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Parla/",
+        "Parla"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Alcorc\u00f3n/",
+        "Alcorc\u00f3n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Torrej\u00f3n+de+Ardoz/",
+        "Torrej\u00f3n de Ardoz"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Cantabria/cities/Santander/",
+        "Santander"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Illes+Balears/cities/Palma+de+Mallorca/",
+        "Palma de Mallorca"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/cities/Santiago+de+Compostela/",
+        "Santiago de Compostela"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/cities/Vigo/",
+        "Vigo"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Murcia/cities/Murcia/",
+        "Murcia"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/cities/Valencia/",
+        "Valencia"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/cities/Elche/",
+        "Elche"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/cities/Alicante/",
+        "Alicante"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Murcia/cities/Cartagena/",
+        "Cartagena"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Asturias/cities/Oviedo/",
+        "Oviedo"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Asturias/cities/Gij\u00f3n/",
+        "Gij\u00f3n"
       ]
     ],
-    "religionInfo-": [
-      "http://www.semwebtech.org/mondial/10/countries/D/",
-      "Germany"
+    "area": "504750",
+    "isMember": [
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WIPO/",
+        "World Intellectual Property Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNHCR/",
+        "United Nations High Commissioner for Refugees"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/Interpol/",
+        "International Criminal Police Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ILO/",
+        "International Labor Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IBRD/",
+        "International Bank for Reconstruction and Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/AfDB/",
+        "African Development Bank Group"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CD/",
+        "Community of Democracies"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/OECD/",
+        "Organization for Economic Cooperation and Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IFAD/",
+        "International Fund for Agricultural Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WMO/",
+        "World Meteorological Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IOM/",
+        "International Organization for Migration"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IOC/",
+        "International Olympic Committee"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UN/",
+        "United Nations"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/AG/",
+        "Australia Group"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ICC/",
+        "International Chamber of Commerce"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/FAO/",
+        "Food and Agriculture Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IFC/",
+        "International Finance Corporation"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WTO/",
+        "World Trade Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ZC/",
+        "Zangger Committee"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IHO/",
+        "International Hydrographic Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IMO/",
+        "International Maritime Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ITUC/",
+        "International Trade Union Confederation"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/NEA/",
+        "Nuclear Energy Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/SELEC/",
+        "Convention of the Southeast European Law Enforcement Center"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNCTAD/",
+        "United Nations Conference on Trade and Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ICJ/",
+        "International Court of Justice"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNRWA/",
+        "United Nations Relief and Works Agency for Palestine Refugees in the Near East"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WCO/",
+        "World Customs Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/NATO/",
+        "North Atlantic Treaty Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IFRCS/",
+        "International Federation of Red Cross and Red Crescent Societies"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ITU/",
+        "International Telecommunication Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/NSG/",
+        "Nuclear Suppliers Group"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/OPCW/",
+        "Organization for the Prohibition of Chemical Weapons"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IEA/",
+        "International Energy Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IAEA/",
+        "International Atomic Energy Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EMU/",
+        "Economic and Monetary Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ICAO/",
+        "International Civil Aviation Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/MIGA/",
+        "Multilateral Investment Guarantee Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UPU/",
+        "Universal Postal Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/BCIE/",
+        "Central American Bank for Economic Integration"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IPU/",
+        "Inter-Parliamentary Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/SICA/",
+        "Central American Integration System"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IMF/",
+        "International Monetary Fund"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ICCt/",
+        "International Criminal Court"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/OAS/",
+        "Organization of American States"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ISO/",
+        "International Organization for Standardization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ITSO/",
+        "International Telecommunication Satellite Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ADB/",
+        "Asian Development Bank"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IADB/",
+        "Inter-American Development Bank"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNWTO/",
+        "World Tourism Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IMSO/",
+        "International Mobile Satellite Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WHO/",
+        "World Health Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNIDO/",
+        "United Nations Industrial Development Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IDA/",
+        "International Development Association"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/PCA/",
+        "Permanent Court of Arbitration"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNESCO/",
+        "United Nations Educational, Scientific, and Cultural Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNIFIL/",
+        "United Nations Interim Force in Lebanon"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/BIS/",
+        "Bank for International Settlements"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EBRD/",
+        "European Bank for Reconstruction and Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ESA/",
+        "European Space Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/OSCE/",
+        "Organization for Security and Cooperation in Europe"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EAPC/",
+        "Euro-Atlantic Partnership Council"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CERN/",
+        "European Organization for Nuclear Research"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/FATF/",
+        "Financial Action Task Force"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EIB/",
+        "European Investment Bank"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ECB/",
+        "European Central Bank"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CE/",
+        "Council of Europe"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EU/",
+        "European Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EITI/",
+        "Extractive Industry Transparency Initiative"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/LAIA/",
+        "Latin American Integration Association"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CAN/",
+        "Andean Community"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CBSS/",
+        "Council of the Baltic Sea States"
+      ]
+    ],
+    "hasProvince": [
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/",
+        "Andaluc\u00eda"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/",
+        "Castilla y Le\u00f3n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla-La+Mancha/",
+        "Castilla-La Mancha"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Extremadura/",
+        "Extremadura"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Arag\u00f3n/",
+        "Arag\u00f3n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/La+Rioja/",
+        "La Rioja"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Navarra/",
+        "Navarra"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/",
+        "Catalunya"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/",
+        "Euskadi"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/",
+        "Canarias"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/",
+        "Madrid"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Cantabria/",
+        "Cantabria"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Illes+Balears/",
+        "Illes Balears"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/",
+        "Galicia"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/",
+        "Valenciana"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Asturias/",
+        "Asturias"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Murcia/",
+        "Murcia"
+      ]
+    ],
+    "neighbor": [
+      [
+        "http://www.semwebtech.org/mondial/10/countries/F/",
+        "France"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/P/",
+        "Portugal"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/GBZ/",
+        "Gibraltar"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/AND/",
+        "Andorra"
+      ]
+    ],
+    "localname": "el Reino de Espa\u00f1a",
+    "independenceDate": "1492-01-01",
+    "populationGrowth": "0.78",
+    "gdpAgri": "3.1",
+    "gdpInd": "26",
+    "government": "parliamentary monarchy",
+    "gdpTotal": "1356000",
+    "infantMortality": "2.7",
+    "encompassed": [
+      "http://www.semwebtech.org/mondial/10/continents/Europe/",
+      "Europe"
+    ],
+    "inflation": "1.8",
+    "carCode": "E",
+    "gdpServ": "70.8",
+    "unemployment": "26.3",
+    "hasBorder": [
+      "node23148",
+      "node23714",
+      "node28153",
+      "node29084",
+      "node52286",
+      "node52852",
+      "node57291",
+      "node58222",
+      "node75531",
+      "node75535",
+      "node75536",
+      "node75537"
+    ],
+    "borders": [
+      [
+        "http://www.semwebtech.org/mondial/10/countries/F/",
+        "France"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/P/",
+        "Portugal"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/GBZ/",
+        "Gibraltar"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/AND/",
+        "Andorra"
+      ]
+    ],
+    "encompassedByInfo": [
+      "node18076",
+      "node47214",
+      "node75278"
+    ],
+    "isInMembership": [
+      "node17030",
+      "node17455",
+      "node17649",
+      "node17759",
+      "node17820",
+      "node17939",
+      "node18313",
+      "node18345",
+      "node18475",
+      "node18522",
+      "node18642",
+      "node18866",
+      "node18981",
+      "node19020",
+      "node19096",
+      "node19615",
+      "node19785",
+      "node19812",
+      "node20013",
+      "node20072",
+      "node20471",
+      "node21109",
+      "node21144",
+      "node21327",
+      "node21585",
+      "node21668",
+      "node21861",
+      "node21874",
+      "node21922",
+      "node22326",
+      "node22693",
+      "node22713",
+      "node22867",
+      "node23116",
+      "node23132",
+      "node23160",
+      "node23301",
+      "node23695",
+      "node24175",
+      "node24224",
+      "node24584",
+      "node25117",
+      "node25253",
+      "node25289",
+      "node25584",
+      "node25630",
+      "node25818",
+      "node25959",
+      "node25992",
+      "node26333",
+      "node26337",
+      "node26621",
+      "node26694",
+      "node26788",
+      "node26845",
+      "node27193",
+      "node27268",
+      "node27404",
+      "node27412",
+      "node27554",
+      "node27645",
+      "node27732",
+      "node27914",
+      "node27960",
+      "node28046",
+      "node28220",
+      "node28655",
+      "node28662",
+      "node28672",
+      "node28751",
+      "node29027",
+      "node29122",
+      "node46168",
+      "node46593",
+      "node46787",
+      "node46897",
+      "node46958",
+      "node47077",
+      "node47451",
+      "node47483",
+      "node47613",
+      "node47660",
+      "node47780",
+      "node48004",
+      "node48119",
+      "node48158",
+      "node48234",
+      "node48753",
+      "node48923",
+      "node48950",
+      "node49151",
+      "node49210",
+      "node49609",
+      "node50247",
+      "node50282",
+      "node50465",
+      "node50723",
+      "node50806",
+      "node50999",
+      "node51012",
+      "node51060",
+      "node51464",
+      "node51831",
+      "node51851",
+      "node52005",
+      "node52254",
+      "node52270",
+      "node52298",
+      "node52439",
+      "node52833",
+      "node53313",
+      "node53362",
+      "node53722",
+      "node54255",
+      "node54391",
+      "node54427",
+      "node54722",
+      "node54768",
+      "node54956",
+      "node55097",
+      "node55130",
+      "node55471",
+      "node55475",
+      "node55759",
+      "node55832",
+      "node55926",
+      "node55983",
+      "node56331",
+      "node56406",
+      "node56542",
+      "node56550",
+      "node56692",
+      "node56783",
+      "node56870",
+      "node57052",
+      "node57098",
+      "node57184",
+      "node57358",
+      "node57793",
+      "node57800",
+      "node57810",
+      "node57889",
+      "node58165",
+      "node58260",
+      "node75898",
+      "node76190",
+      "node76350",
+      "node76391",
+      "node76440",
+      "node76597",
+      "node76618",
+      "node76773",
+      "node76990",
+      "node77011",
+      "node77069",
+      "node77127",
+      "node77186",
+      "node77237",
+      "node77296",
+      "node77318",
+      "node77346",
+      "node77371",
+      "node77394",
+      "node77426",
+      "node77480",
+      "node77522",
+      "node77992",
+      "node78068",
+      "node78229",
+      "node78393",
+      "node78576",
+      "node78706",
+      "node78889",
+      "node78965",
+      "node79087",
+      "node79288",
+      "node79455",
+      "node79488",
+      "node79675",
+      "node79852",
+      "node80025",
+      "node80111",
+      "node80294",
+      "node80463",
+      "node80564",
+      "node80755",
+      "node80955",
+      "node81117",
+      "node81354",
+      "node81507",
+      "node81698",
+      "node81942",
+      "node81989",
+      "node82320",
+      "node82347",
+      "node82379",
+      "node82430",
+      "node82469",
+      "node82526",
+      "node82751",
+      "node82968",
+      "node83210",
+      "node83404",
+      "node83602",
+      "node83802",
+      "node83890",
+      "node84087",
+      "node84391",
+      "node84460",
+      "node84688",
+      "node84992",
+      "node85184",
+      "node85367",
+      "node85551",
+      "node85710",
+      "node85890"
+    ],
+    "languageInfo": [
+      "node17514",
+      "node27023",
+      "node27088",
+      "node27317",
+      "node46652",
+      "node56161",
+      "node56226",
+      "node56455",
+      "node85952",
+      "node85953",
+      "node85954",
+      "node85955"
+    ],
+    "ethnicInfo": [
+      "node26494",
+      "node55632",
+      "node86813"
+    ],
+    "religionInfo": [
+      "node20288",
+      "node20716",
+      "node24488",
+      "node28972",
+      "node49426",
+      "node49854",
+      "node53626",
+      "node58110",
+      "node86244",
+      "node86245",
+      "node86246",
+      "node86247"
+    ]
+  },
+  "LargeArea": {
+    "type": [
+      "http://www.semwebtech.org/mondial/10/meta#Country",
+      "http://www.semwebtech.org/mondial/10/meta#LargeArea",
+      "http://www.semwebtech.org/mondial/10/meta#Area"
+    ],
+    "population": "46815916",
+    "name": "Spain",
+    "hadPopulation": [
+      "node2987",
+      "node2988",
+      "node3042",
+      "node3500",
+      "node3517",
+      "node3518",
+      "node3519",
+      "node3520",
+      "node3541",
+      "node3542",
+      "node3543",
+      "node3583",
+      "node32125",
+      "node32126",
+      "node32180",
+      "node32638",
+      "node32655",
+      "node32656",
+      "node32657",
+      "node32658",
+      "node32679",
+      "node32680",
+      "node32681",
+      "node32721",
+      "node58351",
+      "node58352",
+      "node58353",
+      "node58354",
+      "node58355",
+      "node58356",
+      "node58357",
+      "node58358",
+      "node58359",
+      "node58360",
+      "node58361",
+      "node58362"
+    ],
+    "capital": [
+      "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Madrid/",
+      "Madrid"
+    ],
+    "hasCity": [
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Madrid/",
+        "Madrid"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Lleida/",
+        "Lleida"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Jerez+de+la+Frontera/",
+        "Jerez de la Frontera"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Almer\u00eda/",
+        "Almer\u00eda"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Sevilla/",
+        "Sevilla"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Algeciras/",
+        "Algeciras"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Marbella/",
+        "Marbella"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Dos+Hermanas/",
+        "Dos Hermanas"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Ja\u00e9n/",
+        "Ja\u00e9n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/C\u00e1diz/",
+        "C\u00e1diz"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Granada/",
+        "Granada"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/C\u00f3rdoba/",
+        "C\u00f3rdoba"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Huelva/",
+        "Huelva"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/M\u00e1laga/",
+        "M\u00e1laga"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Alcal\u00e1+de+Henares/",
+        "Alcal\u00e1 de Henares"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/cities/Valladolid/",
+        "Valladolid"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/cities/Salamanca/",
+        "Salamanca"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/cities/Le\u00f3n/",
+        "Le\u00f3n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/cities/Burgos/",
+        "Burgos"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla-La+Mancha/cities/Toledo/",
+        "Toledo"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla-La+Mancha/cities/Albacete/",
+        "Albacete"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Extremadura/cities/Badajoz/",
+        "Badajoz"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Extremadura/cities/Merida/",
+        "Merida"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Fuenlabrada/",
+        "Fuenlabrada"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/M\u00f3stoles/",
+        "M\u00f3stoles"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/cities/Castell\u00f3n+de+la+Plana/",
+        "Castell\u00f3n de la Plana"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Arag\u00f3n/cities/Zaragoza/",
+        "Zaragoza"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/La+Rioja/cities/Logro\u00f1o/",
+        "Logro\u00f1o"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Navarra/cities/Pamplona/",
+        "Pamplona"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Hospitalet+de+Llobregat/",
+        "Hospitalet de Llobregat"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Sabadell/",
+        "Sabadell"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Matar\u00f3/",
+        "Matar\u00f3"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Reus/",
+        "Reus"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Barcelona/",
+        "Barcelona"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Tarragona/",
+        "Tarragona"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Badalona/",
+        "Badalona"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Santa+Coloma+de+Gramenet/",
+        "Santa Coloma de Gramenet"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Terrassa/",
+        "Terrassa"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/cities/Bilbao/",
+        "Bilbao"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/cities/Vitoria-Gasteiz/",
+        "Vitoria-Gasteiz"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/cities/Donostia/",
+        "Donostia"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/cities/Barakaldo/",
+        "Barakaldo"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/cities/A+Coru\u00f1a/",
+        "A Coru\u00f1a"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/cities/Las+Palmas+de+Gran+Canaria/",
+        "Las Palmas de Gran Canaria"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/cities/Telde/",
+        "Telde"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/cities/Santa+Cruz+de+Tenerife/",
+        "Santa Cruz de Tenerife"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/cities/San+Crist\u00f3bal+de+La+Laguna/",
+        "San Crist\u00f3bal de La Laguna"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Alcobendas/",
+        "Alcobendas"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/cities/Ourense/",
+        "Ourense"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Legan\u00e9s/",
+        "Legan\u00e9s"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Getafe/",
+        "Getafe"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Parla/",
+        "Parla"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Alcorc\u00f3n/",
+        "Alcorc\u00f3n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Torrej\u00f3n+de+Ardoz/",
+        "Torrej\u00f3n de Ardoz"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Cantabria/cities/Santander/",
+        "Santander"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Illes+Balears/cities/Palma+de+Mallorca/",
+        "Palma de Mallorca"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/cities/Santiago+de+Compostela/",
+        "Santiago de Compostela"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/cities/Vigo/",
+        "Vigo"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Murcia/cities/Murcia/",
+        "Murcia"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/cities/Valencia/",
+        "Valencia"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/cities/Elche/",
+        "Elche"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/cities/Alicante/",
+        "Alicante"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Murcia/cities/Cartagena/",
+        "Cartagena"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Asturias/cities/Oviedo/",
+        "Oviedo"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Asturias/cities/Gij\u00f3n/",
+        "Gij\u00f3n"
+      ]
+    ],
+    "area": "504750",
+    "isMember": [
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WIPO/",
+        "World Intellectual Property Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNHCR/",
+        "United Nations High Commissioner for Refugees"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/Interpol/",
+        "International Criminal Police Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ILO/",
+        "International Labor Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IBRD/",
+        "International Bank for Reconstruction and Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/AfDB/",
+        "African Development Bank Group"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CD/",
+        "Community of Democracies"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/OECD/",
+        "Organization for Economic Cooperation and Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IFAD/",
+        "International Fund for Agricultural Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WMO/",
+        "World Meteorological Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IOM/",
+        "International Organization for Migration"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IOC/",
+        "International Olympic Committee"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UN/",
+        "United Nations"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/AG/",
+        "Australia Group"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ICC/",
+        "International Chamber of Commerce"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/FAO/",
+        "Food and Agriculture Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IFC/",
+        "International Finance Corporation"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WTO/",
+        "World Trade Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ZC/",
+        "Zangger Committee"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IHO/",
+        "International Hydrographic Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IMO/",
+        "International Maritime Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ITUC/",
+        "International Trade Union Confederation"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/NEA/",
+        "Nuclear Energy Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/SELEC/",
+        "Convention of the Southeast European Law Enforcement Center"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNCTAD/",
+        "United Nations Conference on Trade and Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ICJ/",
+        "International Court of Justice"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNRWA/",
+        "United Nations Relief and Works Agency for Palestine Refugees in the Near East"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WCO/",
+        "World Customs Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/NATO/",
+        "North Atlantic Treaty Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IFRCS/",
+        "International Federation of Red Cross and Red Crescent Societies"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ITU/",
+        "International Telecommunication Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/NSG/",
+        "Nuclear Suppliers Group"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/OPCW/",
+        "Organization for the Prohibition of Chemical Weapons"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IEA/",
+        "International Energy Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IAEA/",
+        "International Atomic Energy Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EMU/",
+        "Economic and Monetary Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ICAO/",
+        "International Civil Aviation Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/MIGA/",
+        "Multilateral Investment Guarantee Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UPU/",
+        "Universal Postal Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/BCIE/",
+        "Central American Bank for Economic Integration"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IPU/",
+        "Inter-Parliamentary Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/SICA/",
+        "Central American Integration System"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IMF/",
+        "International Monetary Fund"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ICCt/",
+        "International Criminal Court"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/OAS/",
+        "Organization of American States"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ISO/",
+        "International Organization for Standardization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ITSO/",
+        "International Telecommunication Satellite Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ADB/",
+        "Asian Development Bank"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IADB/",
+        "Inter-American Development Bank"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNWTO/",
+        "World Tourism Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IMSO/",
+        "International Mobile Satellite Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WHO/",
+        "World Health Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNIDO/",
+        "United Nations Industrial Development Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IDA/",
+        "International Development Association"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/PCA/",
+        "Permanent Court of Arbitration"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNESCO/",
+        "United Nations Educational, Scientific, and Cultural Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNIFIL/",
+        "United Nations Interim Force in Lebanon"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/BIS/",
+        "Bank for International Settlements"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EBRD/",
+        "European Bank for Reconstruction and Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ESA/",
+        "European Space Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/OSCE/",
+        "Organization for Security and Cooperation in Europe"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EAPC/",
+        "Euro-Atlantic Partnership Council"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CERN/",
+        "European Organization for Nuclear Research"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/FATF/",
+        "Financial Action Task Force"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EIB/",
+        "European Investment Bank"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ECB/",
+        "European Central Bank"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CE/",
+        "Council of Europe"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EU/",
+        "European Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EITI/",
+        "Extractive Industry Transparency Initiative"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/LAIA/",
+        "Latin American Integration Association"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CAN/",
+        "Andean Community"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CBSS/",
+        "Council of the Baltic Sea States"
+      ]
+    ],
+    "hasProvince": [
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/",
+        "Andaluc\u00eda"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/",
+        "Castilla y Le\u00f3n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla-La+Mancha/",
+        "Castilla-La Mancha"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Extremadura/",
+        "Extremadura"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Arag\u00f3n/",
+        "Arag\u00f3n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/La+Rioja/",
+        "La Rioja"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Navarra/",
+        "Navarra"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/",
+        "Catalunya"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/",
+        "Euskadi"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/",
+        "Canarias"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/",
+        "Madrid"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Cantabria/",
+        "Cantabria"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Illes+Balears/",
+        "Illes Balears"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/",
+        "Galicia"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/",
+        "Valenciana"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Asturias/",
+        "Asturias"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Murcia/",
+        "Murcia"
+      ]
+    ],
+    "neighbor": [
+      [
+        "http://www.semwebtech.org/mondial/10/countries/F/",
+        "France"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/P/",
+        "Portugal"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/GBZ/",
+        "Gibraltar"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/AND/",
+        "Andorra"
+      ]
+    ],
+    "localname": "el Reino de Espa\u00f1a",
+    "independenceDate": "1492-01-01",
+    "populationGrowth": "0.78",
+    "gdpAgri": "3.1",
+    "gdpInd": "26",
+    "government": "parliamentary monarchy",
+    "gdpTotal": "1356000",
+    "infantMortality": "2.7",
+    "encompassed": [
+      "http://www.semwebtech.org/mondial/10/continents/Europe/",
+      "Europe"
+    ],
+    "inflation": "1.8",
+    "carCode": "E",
+    "gdpServ": "70.8",
+    "unemployment": "26.3",
+    "hasBorder": [
+      "node23148",
+      "node23714",
+      "node28153",
+      "node29084",
+      "node52286",
+      "node52852",
+      "node57291",
+      "node58222",
+      "node75531",
+      "node75535",
+      "node75536",
+      "node75537"
+    ],
+    "borders": [
+      [
+        "http://www.semwebtech.org/mondial/10/countries/F/",
+        "France"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/P/",
+        "Portugal"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/GBZ/",
+        "Gibraltar"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/AND/",
+        "Andorra"
+      ]
+    ],
+    "encompassedByInfo": [
+      "node18076",
+      "node47214",
+      "node75278"
+    ],
+    "isInMembership": [
+      "node17030",
+      "node17455",
+      "node17649",
+      "node17759",
+      "node17820",
+      "node17939",
+      "node18313",
+      "node18345",
+      "node18475",
+      "node18522",
+      "node18642",
+      "node18866",
+      "node18981",
+      "node19020",
+      "node19096",
+      "node19615",
+      "node19785",
+      "node19812",
+      "node20013",
+      "node20072",
+      "node20471",
+      "node21109",
+      "node21144",
+      "node21327",
+      "node21585",
+      "node21668",
+      "node21861",
+      "node21874",
+      "node21922",
+      "node22326",
+      "node22693",
+      "node22713",
+      "node22867",
+      "node23116",
+      "node23132",
+      "node23160",
+      "node23301",
+      "node23695",
+      "node24175",
+      "node24224",
+      "node24584",
+      "node25117",
+      "node25253",
+      "node25289",
+      "node25584",
+      "node25630",
+      "node25818",
+      "node25959",
+      "node25992",
+      "node26333",
+      "node26337",
+      "node26621",
+      "node26694",
+      "node26788",
+      "node26845",
+      "node27193",
+      "node27268",
+      "node27404",
+      "node27412",
+      "node27554",
+      "node27645",
+      "node27732",
+      "node27914",
+      "node27960",
+      "node28046",
+      "node28220",
+      "node28655",
+      "node28662",
+      "node28672",
+      "node28751",
+      "node29027",
+      "node29122",
+      "node46168",
+      "node46593",
+      "node46787",
+      "node46897",
+      "node46958",
+      "node47077",
+      "node47451",
+      "node47483",
+      "node47613",
+      "node47660",
+      "node47780",
+      "node48004",
+      "node48119",
+      "node48158",
+      "node48234",
+      "node48753",
+      "node48923",
+      "node48950",
+      "node49151",
+      "node49210",
+      "node49609",
+      "node50247",
+      "node50282",
+      "node50465",
+      "node50723",
+      "node50806",
+      "node50999",
+      "node51012",
+      "node51060",
+      "node51464",
+      "node51831",
+      "node51851",
+      "node52005",
+      "node52254",
+      "node52270",
+      "node52298",
+      "node52439",
+      "node52833",
+      "node53313",
+      "node53362",
+      "node53722",
+      "node54255",
+      "node54391",
+      "node54427",
+      "node54722",
+      "node54768",
+      "node54956",
+      "node55097",
+      "node55130",
+      "node55471",
+      "node55475",
+      "node55759",
+      "node55832",
+      "node55926",
+      "node55983",
+      "node56331",
+      "node56406",
+      "node56542",
+      "node56550",
+      "node56692",
+      "node56783",
+      "node56870",
+      "node57052",
+      "node57098",
+      "node57184",
+      "node57358",
+      "node57793",
+      "node57800",
+      "node57810",
+      "node57889",
+      "node58165",
+      "node58260",
+      "node75898",
+      "node76190",
+      "node76350",
+      "node76391",
+      "node76440",
+      "node76597",
+      "node76618",
+      "node76773",
+      "node76990",
+      "node77011",
+      "node77069",
+      "node77127",
+      "node77186",
+      "node77237",
+      "node77296",
+      "node77318",
+      "node77346",
+      "node77371",
+      "node77394",
+      "node77426",
+      "node77480",
+      "node77522",
+      "node77992",
+      "node78068",
+      "node78229",
+      "node78393",
+      "node78576",
+      "node78706",
+      "node78889",
+      "node78965",
+      "node79087",
+      "node79288",
+      "node79455",
+      "node79488",
+      "node79675",
+      "node79852",
+      "node80025",
+      "node80111",
+      "node80294",
+      "node80463",
+      "node80564",
+      "node80755",
+      "node80955",
+      "node81117",
+      "node81354",
+      "node81507",
+      "node81698",
+      "node81942",
+      "node81989",
+      "node82320",
+      "node82347",
+      "node82379",
+      "node82430",
+      "node82469",
+      "node82526",
+      "node82751",
+      "node82968",
+      "node83210",
+      "node83404",
+      "node83602",
+      "node83802",
+      "node83890",
+      "node84087",
+      "node84391",
+      "node84460",
+      "node84688",
+      "node84992",
+      "node85184",
+      "node85367",
+      "node85551",
+      "node85710",
+      "node85890"
+    ],
+    "languageInfo": [
+      "node17514",
+      "node27023",
+      "node27088",
+      "node27317",
+      "node46652",
+      "node56161",
+      "node56226",
+      "node56455",
+      "node85952",
+      "node85953",
+      "node85954",
+      "node85955"
+    ],
+    "ethnicInfo": [
+      "node26494",
+      "node55632",
+      "node86813"
+    ],
+    "religionInfo": [
+      "node20288",
+      "node20716",
+      "node24488",
+      "node28972",
+      "node49426",
+      "node49854",
+      "node53626",
+      "node58110",
+      "node86244",
+      "node86245",
+      "node86246",
+      "node86247"
+    ]
+  },
+  "Area": {
+    "type": [
+      "http://www.semwebtech.org/mondial/10/meta#Country",
+      "http://www.semwebtech.org/mondial/10/meta#LargeArea",
+      "http://www.semwebtech.org/mondial/10/meta#Area"
+    ],
+    "population": "46815916",
+    "name": "Spain",
+    "hadPopulation": [
+      "node2987",
+      "node2988",
+      "node3042",
+      "node3500",
+      "node3517",
+      "node3518",
+      "node3519",
+      "node3520",
+      "node3541",
+      "node3542",
+      "node3543",
+      "node3583",
+      "node32125",
+      "node32126",
+      "node32180",
+      "node32638",
+      "node32655",
+      "node32656",
+      "node32657",
+      "node32658",
+      "node32679",
+      "node32680",
+      "node32681",
+      "node32721",
+      "node58351",
+      "node58352",
+      "node58353",
+      "node58354",
+      "node58355",
+      "node58356",
+      "node58357",
+      "node58358",
+      "node58359",
+      "node58360",
+      "node58361",
+      "node58362"
+    ],
+    "capital": [
+      "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Madrid/",
+      "Madrid"
+    ],
+    "hasCity": [
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Madrid/",
+        "Madrid"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Lleida/",
+        "Lleida"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Jerez+de+la+Frontera/",
+        "Jerez de la Frontera"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Almer\u00eda/",
+        "Almer\u00eda"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Sevilla/",
+        "Sevilla"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Algeciras/",
+        "Algeciras"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Marbella/",
+        "Marbella"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Dos+Hermanas/",
+        "Dos Hermanas"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Ja\u00e9n/",
+        "Ja\u00e9n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/C\u00e1diz/",
+        "C\u00e1diz"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Granada/",
+        "Granada"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/C\u00f3rdoba/",
+        "C\u00f3rdoba"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/Huelva/",
+        "Huelva"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/cities/M\u00e1laga/",
+        "M\u00e1laga"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Alcal\u00e1+de+Henares/",
+        "Alcal\u00e1 de Henares"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/cities/Valladolid/",
+        "Valladolid"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/cities/Salamanca/",
+        "Salamanca"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/cities/Le\u00f3n/",
+        "Le\u00f3n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/cities/Burgos/",
+        "Burgos"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla-La+Mancha/cities/Toledo/",
+        "Toledo"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla-La+Mancha/cities/Albacete/",
+        "Albacete"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Extremadura/cities/Badajoz/",
+        "Badajoz"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Extremadura/cities/Merida/",
+        "Merida"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Fuenlabrada/",
+        "Fuenlabrada"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/M\u00f3stoles/",
+        "M\u00f3stoles"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/cities/Castell\u00f3n+de+la+Plana/",
+        "Castell\u00f3n de la Plana"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Arag\u00f3n/cities/Zaragoza/",
+        "Zaragoza"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/La+Rioja/cities/Logro\u00f1o/",
+        "Logro\u00f1o"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Navarra/cities/Pamplona/",
+        "Pamplona"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Hospitalet+de+Llobregat/",
+        "Hospitalet de Llobregat"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Sabadell/",
+        "Sabadell"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Matar\u00f3/",
+        "Matar\u00f3"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Reus/",
+        "Reus"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Barcelona/",
+        "Barcelona"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Tarragona/",
+        "Tarragona"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Badalona/",
+        "Badalona"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Santa+Coloma+de+Gramenet/",
+        "Santa Coloma de Gramenet"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/cities/Terrassa/",
+        "Terrassa"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/cities/Bilbao/",
+        "Bilbao"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/cities/Vitoria-Gasteiz/",
+        "Vitoria-Gasteiz"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/cities/Donostia/",
+        "Donostia"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/cities/Barakaldo/",
+        "Barakaldo"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/cities/A+Coru\u00f1a/",
+        "A Coru\u00f1a"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/cities/Las+Palmas+de+Gran+Canaria/",
+        "Las Palmas de Gran Canaria"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/cities/Telde/",
+        "Telde"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/cities/Santa+Cruz+de+Tenerife/",
+        "Santa Cruz de Tenerife"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/cities/San+Crist\u00f3bal+de+La+Laguna/",
+        "San Crist\u00f3bal de La Laguna"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Alcobendas/",
+        "Alcobendas"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/cities/Ourense/",
+        "Ourense"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Legan\u00e9s/",
+        "Legan\u00e9s"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Getafe/",
+        "Getafe"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Parla/",
+        "Parla"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Alcorc\u00f3n/",
+        "Alcorc\u00f3n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/cities/Torrej\u00f3n+de+Ardoz/",
+        "Torrej\u00f3n de Ardoz"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Cantabria/cities/Santander/",
+        "Santander"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Illes+Balears/cities/Palma+de+Mallorca/",
+        "Palma de Mallorca"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/cities/Santiago+de+Compostela/",
+        "Santiago de Compostela"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/cities/Vigo/",
+        "Vigo"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Murcia/cities/Murcia/",
+        "Murcia"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/cities/Valencia/",
+        "Valencia"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/cities/Elche/",
+        "Elche"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/cities/Alicante/",
+        "Alicante"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Murcia/cities/Cartagena/",
+        "Cartagena"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Asturias/cities/Oviedo/",
+        "Oviedo"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Asturias/cities/Gij\u00f3n/",
+        "Gij\u00f3n"
+      ]
+    ],
+    "area": "504750",
+    "isMember": [
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WIPO/",
+        "World Intellectual Property Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNHCR/",
+        "United Nations High Commissioner for Refugees"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/Interpol/",
+        "International Criminal Police Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ILO/",
+        "International Labor Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IBRD/",
+        "International Bank for Reconstruction and Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/AfDB/",
+        "African Development Bank Group"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CD/",
+        "Community of Democracies"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/OECD/",
+        "Organization for Economic Cooperation and Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IFAD/",
+        "International Fund for Agricultural Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WMO/",
+        "World Meteorological Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IOM/",
+        "International Organization for Migration"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IOC/",
+        "International Olympic Committee"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UN/",
+        "United Nations"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/AG/",
+        "Australia Group"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ICC/",
+        "International Chamber of Commerce"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/FAO/",
+        "Food and Agriculture Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IFC/",
+        "International Finance Corporation"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WTO/",
+        "World Trade Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ZC/",
+        "Zangger Committee"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IHO/",
+        "International Hydrographic Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IMO/",
+        "International Maritime Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ITUC/",
+        "International Trade Union Confederation"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/NEA/",
+        "Nuclear Energy Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/SELEC/",
+        "Convention of the Southeast European Law Enforcement Center"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNCTAD/",
+        "United Nations Conference on Trade and Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ICJ/",
+        "International Court of Justice"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNRWA/",
+        "United Nations Relief and Works Agency for Palestine Refugees in the Near East"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WCO/",
+        "World Customs Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/NATO/",
+        "North Atlantic Treaty Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IFRCS/",
+        "International Federation of Red Cross and Red Crescent Societies"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ITU/",
+        "International Telecommunication Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/NSG/",
+        "Nuclear Suppliers Group"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/OPCW/",
+        "Organization for the Prohibition of Chemical Weapons"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IEA/",
+        "International Energy Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IAEA/",
+        "International Atomic Energy Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EMU/",
+        "Economic and Monetary Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ICAO/",
+        "International Civil Aviation Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/MIGA/",
+        "Multilateral Investment Guarantee Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UPU/",
+        "Universal Postal Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/BCIE/",
+        "Central American Bank for Economic Integration"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IPU/",
+        "Inter-Parliamentary Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/SICA/",
+        "Central American Integration System"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IMF/",
+        "International Monetary Fund"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ICCt/",
+        "International Criminal Court"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/OAS/",
+        "Organization of American States"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ISO/",
+        "International Organization for Standardization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ITSO/",
+        "International Telecommunication Satellite Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ADB/",
+        "Asian Development Bank"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IADB/",
+        "Inter-American Development Bank"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNWTO/",
+        "World Tourism Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IMSO/",
+        "International Mobile Satellite Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/WHO/",
+        "World Health Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNIDO/",
+        "United Nations Industrial Development Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/IDA/",
+        "International Development Association"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/PCA/",
+        "Permanent Court of Arbitration"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNESCO/",
+        "United Nations Educational, Scientific, and Cultural Organization"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/UNIFIL/",
+        "United Nations Interim Force in Lebanon"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/BIS/",
+        "Bank for International Settlements"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EBRD/",
+        "European Bank for Reconstruction and Development"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ESA/",
+        "European Space Agency"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/OSCE/",
+        "Organization for Security and Cooperation in Europe"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EAPC/",
+        "Euro-Atlantic Partnership Council"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CERN/",
+        "European Organization for Nuclear Research"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/FATF/",
+        "Financial Action Task Force"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EIB/",
+        "European Investment Bank"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/ECB/",
+        "European Central Bank"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CE/",
+        "Council of Europe"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EU/",
+        "European Union"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/EITI/",
+        "Extractive Industry Transparency Initiative"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/LAIA/",
+        "Latin American Integration Association"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CAN/",
+        "Andean Community"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/organizations/CBSS/",
+        "Council of the Baltic Sea States"
+      ]
+    ],
+    "hasProvince": [
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Andaluc\u00eda/",
+        "Andaluc\u00eda"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla+y+Le\u00f3n/",
+        "Castilla y Le\u00f3n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Castilla-La+Mancha/",
+        "Castilla-La Mancha"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Extremadura/",
+        "Extremadura"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Arag\u00f3n/",
+        "Arag\u00f3n"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/La+Rioja/",
+        "La Rioja"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Navarra/",
+        "Navarra"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Catalunya/",
+        "Catalunya"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Euskadi/",
+        "Euskadi"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Canarias/",
+        "Canarias"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Madrid/",
+        "Madrid"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Cantabria/",
+        "Cantabria"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Illes+Balears/",
+        "Illes Balears"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Galicia/",
+        "Galicia"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Valenciana/",
+        "Valenciana"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Asturias/",
+        "Asturias"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/E/provinces/Murcia/",
+        "Murcia"
+      ]
+    ],
+    "neighbor": [
+      [
+        "http://www.semwebtech.org/mondial/10/countries/F/",
+        "France"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/P/",
+        "Portugal"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/GBZ/",
+        "Gibraltar"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/AND/",
+        "Andorra"
+      ]
+    ],
+    "localname": "el Reino de Espa\u00f1a",
+    "independenceDate": "1492-01-01",
+    "populationGrowth": "0.78",
+    "gdpAgri": "3.1",
+    "gdpInd": "26",
+    "government": "parliamentary monarchy",
+    "gdpTotal": "1356000",
+    "infantMortality": "2.7",
+    "encompassed": [
+      "http://www.semwebtech.org/mondial/10/continents/Europe/",
+      "Europe"
+    ],
+    "inflation": "1.8",
+    "carCode": "E",
+    "gdpServ": "70.8",
+    "unemployment": "26.3",
+    "hasBorder": [
+      "node23148",
+      "node23714",
+      "node28153",
+      "node29084",
+      "node52286",
+      "node52852",
+      "node57291",
+      "node58222",
+      "node75531",
+      "node75535",
+      "node75536",
+      "node75537"
+    ],
+    "borders": [
+      [
+        "http://www.semwebtech.org/mondial/10/countries/F/",
+        "France"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/P/",
+        "Portugal"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/GBZ/",
+        "Gibraltar"
+      ],
+      [
+        "http://www.semwebtech.org/mondial/10/countries/AND/",
+        "Andorra"
+      ]
+    ],
+    "encompassedByInfo": [
+      "node18076",
+      "node47214",
+      "node75278"
+    ],
+    "isInMembership": [
+      "node17030",
+      "node17455",
+      "node17649",
+      "node17759",
+      "node17820",
+      "node17939",
+      "node18313",
+      "node18345",
+      "node18475",
+      "node18522",
+      "node18642",
+      "node18866",
+      "node18981",
+      "node19020",
+      "node19096",
+      "node19615",
+      "node19785",
+      "node19812",
+      "node20013",
+      "node20072",
+      "node20471",
+      "node21109",
+      "node21144",
+      "node21327",
+      "node21585",
+      "node21668",
+      "node21861",
+      "node21874",
+      "node21922",
+      "node22326",
+      "node22693",
+      "node22713",
+      "node22867",
+      "node23116",
+      "node23132",
+      "node23160",
+      "node23301",
+      "node23695",
+      "node24175",
+      "node24224",
+      "node24584",
+      "node25117",
+      "node25253",
+      "node25289",
+      "node25584",
+      "node25630",
+      "node25818",
+      "node25959",
+      "node25992",
+      "node26333",
+      "node26337",
+      "node26621",
+      "node26694",
+      "node26788",
+      "node26845",
+      "node27193",
+      "node27268",
+      "node27404",
+      "node27412",
+      "node27554",
+      "node27645",
+      "node27732",
+      "node27914",
+      "node27960",
+      "node28046",
+      "node28220",
+      "node28655",
+      "node28662",
+      "node28672",
+      "node28751",
+      "node29027",
+      "node29122",
+      "node46168",
+      "node46593",
+      "node46787",
+      "node46897",
+      "node46958",
+      "node47077",
+      "node47451",
+      "node47483",
+      "node47613",
+      "node47660",
+      "node47780",
+      "node48004",
+      "node48119",
+      "node48158",
+      "node48234",
+      "node48753",
+      "node48923",
+      "node48950",
+      "node49151",
+      "node49210",
+      "node49609",
+      "node50247",
+      "node50282",
+      "node50465",
+      "node50723",
+      "node50806",
+      "node50999",
+      "node51012",
+      "node51060",
+      "node51464",
+      "node51831",
+      "node51851",
+      "node52005",
+      "node52254",
+      "node52270",
+      "node52298",
+      "node52439",
+      "node52833",
+      "node53313",
+      "node53362",
+      "node53722",
+      "node54255",
+      "node54391",
+      "node54427",
+      "node54722",
+      "node54768",
+      "node54956",
+      "node55097",
+      "node55130",
+      "node55471",
+      "node55475",
+      "node55759",
+      "node55832",
+      "node55926",
+      "node55983",
+      "node56331",
+      "node56406",
+      "node56542",
+      "node56550",
+      "node56692",
+      "node56783",
+      "node56870",
+      "node57052",
+      "node57098",
+      "node57184",
+      "node57358",
+      "node57793",
+      "node57800",
+      "node57810",
+      "node57889",
+      "node58165",
+      "node58260",
+      "node75898",
+      "node76190",
+      "node76350",
+      "node76391",
+      "node76440",
+      "node76597",
+      "node76618",
+      "node76773",
+      "node76990",
+      "node77011",
+      "node77069",
+      "node77127",
+      "node77186",
+      "node77237",
+      "node77296",
+      "node77318",
+      "node77346",
+      "node77371",
+      "node77394",
+      "node77426",
+      "node77480",
+      "node77522",
+      "node77992",
+      "node78068",
+      "node78229",
+      "node78393",
+      "node78576",
+      "node78706",
+      "node78889",
+      "node78965",
+      "node79087",
+      "node79288",
+      "node79455",
+      "node79488",
+      "node79675",
+      "node79852",
+      "node80025",
+      "node80111",
+      "node80294",
+      "node80463",
+      "node80564",
+      "node80755",
+      "node80955",
+      "node81117",
+      "node81354",
+      "node81507",
+      "node81698",
+      "node81942",
+      "node81989",
+      "node82320",
+      "node82347",
+      "node82379",
+      "node82430",
+      "node82469",
+      "node82526",
+      "node82751",
+      "node82968",
+      "node83210",
+      "node83404",
+      "node83602",
+      "node83802",
+      "node83890",
+      "node84087",
+      "node84391",
+      "node84460",
+      "node84688",
+      "node84992",
+      "node85184",
+      "node85367",
+      "node85551",
+      "node85710",
+      "node85890"
+    ],
+    "languageInfo": [
+      "node17514",
+      "node27023",
+      "node27088",
+      "node27317",
+      "node46652",
+      "node56161",
+      "node56226",
+      "node56455",
+      "node85952",
+      "node85953",
+      "node85954",
+      "node85955"
+    ],
+    "ethnicInfo": [
+      "node26494",
+      "node55632",
+      "node86813"
+    ],
+    "religionInfo": [
+      "node20288",
+      "node20716",
+      "node24488",
+      "node28972",
+      "node49426",
+      "node49854",
+      "node53626",
+      "node58110",
+      "node86244",
+      "node86245",
+      "node86246",
+      "node86247"
     ]
   }
 }

@@ -61,6 +61,7 @@ def element(request, selection):
                     ?item rdf:type <%s> .
                     ?item mon:name ?name
                 }
+                order by asc(?name)
                 """
                 % selection)
 
@@ -73,6 +74,7 @@ def element(request, selection):
                     ?item mon:encompassed <%s> .
                     ?item mon:name ?name
                 }
+                order by asc(?name)
                 """
                 % selection)
 
@@ -103,6 +105,8 @@ def element(request, selection):
                         optional { ?what mon:name ?name }
                     }
                 }
+                order by asc(?name)
+                
                 """
                 % (selection, selection, selection))
 

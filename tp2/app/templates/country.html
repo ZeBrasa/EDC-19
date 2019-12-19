@@ -35,11 +35,23 @@
                             </div>
                         </th>
                          <td style="white-space: nowrap;">
+                            {% if info.SpokenBy.onLanguage|length == 0 %}
+                                <ul>
+                                    <li>
+                                        No Data Found
+                                    </li>
+                                </ul>
+                            {% elif info.SpokenBy.onLanguage|length == 1 %}
+                            <ul>
+                                <li>{{ info.SpokenBy.onLanguage.1 }}</li>
+                            </ul>
+                            {% else %}
                             <ul>
                                 {% for lang in info.SpokenBy.onLanguage %}
                                     <li>{{ lang.1 }}</li>
                                 {% endfor %}
                             </ul>
+                            {% endif %}
                         </td>
                     </tr>
                     <tr>
@@ -53,10 +65,34 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"> Independence</th>
+
+                    {% if info.dependentOf == null %}
+                        {% if info.wasDependentOf == null %}
+
+                        <th scope="row"> Formation</th>
                         <ul>
+                            {% if info.general.independenceDate == null %}
+                                <td>No Data found</td>
+                            {% else %}
                             <td> In {{ info.general.independenceDate }}</td>
+                            {% endif %}
                         </ul>
+                    {% else %}
+                    <th scope="row"> Independence</th>
+                        <ul>
+                            {% for key, val in info.wasDependentOf.items %}
+                            <td> In {{ info.general.independenceDate }} from {{ val }}</td>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    {% else %}
+                     <th scope="row"> Belongs to</th>
+                        <ul>
+                            {% for key, val in info.dependentOf.items %}
+                            <td>  {{ val }}  </td>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
 
                     </tr>
                     <tr>

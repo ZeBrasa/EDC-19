@@ -37,11 +37,17 @@
                         </td>
                     </tr>
                     <th scope="row"> Headquarters location</th>
+                    {% if info.hasHeadq.items == null %}
+                    <td style="white-space: nowrap;">
+                        No Headquarters
+                    </td>
+                    {% else %}
                     <td style="white-space: nowrap;">
                         {% for key, val in info.hasHeadq.items %}
                             <a class="url" href="/{{ key|urlencode }}">{{ val }}</a>
                         {% endfor %}
                     </td>
+                    {% endif %}
                     </tr>
                     </tbody>
                 </table>

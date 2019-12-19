@@ -26,23 +26,22 @@
                         <th scope="row"> Members</th>
                         <td style="white-space: nowrap;">
                             <ul>
-                                {% for country in info.hasMember.name %}
-                                    <li>{{ country }}</li>
+                                {% for key, val in info.hasMember.items %}
+                                    <li style="white-space: nowrap;">
+                                        <a>
+                                            <a class="url" href="/{{ key|urlencode }}"/>{{ val }}</a>
+                                        </a>
+                                    </li>
                                 {% endfor %}
                             </ul>
                         </td>
-
                     </tr>
                     <th scope="row"> Headquarters location</th>
-                    {% if info.hasHeadq.name == null %}
-                        <td style="white-space: nowrap;">
-                            No Headquarters
-                        </td>
-                    {% else %}
-                        <td style="white-space: nowrap;">
-                            <a class="url" href="http://maps.google.com?q={{info.hasHeadq.latitude}},{{info.hasHeadq.longitude}}">{{ info.hasHeadq.name }}</a>
-                        </td>
-                    {% endif %}
+                    <td style="white-space: nowrap;">
+                        {% for key, val in info.hasHeadq.items %}
+                            <a class="url" href="/{{ key|urlencode }}">{{ val }}</a>
+                        {% endfor %}
+                    </td>
                     </tr>
                     </tbody>
                 </table>

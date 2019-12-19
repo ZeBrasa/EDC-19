@@ -72,11 +72,24 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"> Independence</th>
-                                <ul>
-                                        <td> In  {{ info.general.independenceDate }} from {{ info.wasDependentOf.name}}  </td>
-                                </ul>
+                            {% if info.dependentOf == null %}
+                                {% if info.wasDependentOf.name == null %}
+                                    <th scope="row"> Formation</th>
 
+                                    <ul>
+                                            <td>  {{ info.general.independenceDate }}  </td>
+                                    </ul>
+                                {% else %}
+                                    <th scope="row"> Independence</th>
+                                        <td> In  {{ info.general.independenceDate }} from {{ info.wasDependentOf.name}}  </td>
+                                {% endif %}
+                            {% else %}
+                                <th scope="row"> Belongs to</th>
+
+                                    <ul>
+                                            <td>  {{ info.dependentOf.name }}  </td>
+                                    </ul>
+                            {% endif %}
                             </tr>
                             <tr>
                                 <th scope="row"> Government</th>
@@ -184,10 +197,10 @@
                     <div class="plainlist">
                         <h3>Cities:</h3>
                         <ul>
-                                {% for keys in info.hasCity.name %}
+                                {% for key in info.hasCity.name %}
                                 <li style="white-space: nowrap;">
                                     <a>
-                                        <a class="url" href="{{ keys }}"/>{{ keys }}</a>
+                                        <a class="url" href="{{ key }}"/>{{ key }}</a>
                                     </a>
                                 </li>
                                 {% endfor %}
@@ -210,6 +223,7 @@
                         </ul>
                     </div>
                 </div>
+
 
 
 
